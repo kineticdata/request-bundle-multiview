@@ -1,25 +1,18 @@
 jQuery(document).ready(function() {
-    jQuery.blockUI({ message: '<h2>Loading...</h2>' });
-    jQuery('#tabs').tabs();
-    setTimeout(function() {
-        jQuery('#loadingControl').fadeIn();
-        jQuery.unblockUI();
-    }, 1000);
-    
-    jQuery('body').on('click', 'a', function() {
-        jQuery('html, body').animate({ scrollTop: 0 }, 0);
-    });
-
     // Local selectors that are used quite a bit
     var templatesNav = '#templatesNav';
     var categoriesNav = '#categoriesNav';
     var nestedPreview = '#nestedNavigationPreview';
 
     // Some Default states for dom elements
+    jQuery('#tabs').tabs();   
+    jQuery('body').on('click', 'a', function() {
+        jQuery('html, body').animate({ scrollTop: 0 }, 0);
+    });
     jQuery('.infield').inFieldLabels();
     initializeAlphabeticalNav('#templatesAlphabetical', true);
     // Display the header for categories and templates
-    routeHeaderDisplay();   
+    routeHeaderDisplay();
     
     /**
      * This jquery unobtrusive on click event displays the menus
@@ -70,7 +63,6 @@ jQuery(document).ready(function() {
         var categoryId =  jQuery(this).data('id');
         // Check if root bread crumb is selected
         if(categoryId == 'root') {
-
             // Remove arrow for currently selected
             jQuery(this).find('.breadCrumbArrow').remove();
             var rootCategories = jQuery('#rootCategories').html();
@@ -79,7 +71,6 @@ jQuery(document).ready(function() {
             jQuery(this).nextAll().remove();
             routeHeaderDisplay();
         } else {
-
             // Remove arrow for currently selected
             jQuery(this).find('.breadCrumbArrow').remove();
             var currentSubcategories = jQuery('#'+categoryId).find('.subcategories').html();

@@ -36,146 +36,144 @@
     </head>
     
     <body>
-        <div id="loadingControl" class="hidden">
-            <%@include file="../../common/interface/fragments/contentHeader.jspf"%>
-            <div class="container clearfix">
-                <%-- SIDEBAR VIEW --%>
-                <div id="sideNav">
-                    <form id="catalogSearchForm" method="get" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
-                        <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
-                        <p>
-                           <label class="infield" for="searchInput">Search Catalog</label>
-                           <input type="text" name="query" id="searchInput" class="input-large" value="" />
-                           <input type="submit" id="searchButton" value="" />
-                        </p>
-                    </form>
-                    <div id="quicklinks">
-                        <div class="header">
-                            <div>
-                            Quick Links
-                            </div>
+        <%@include file="../../common/interface/fragments/contentHeader.jspf"%>
+        <div class="container clearfix">
+            <%-- SIDEBAR VIEW --%>
+            <div id="sideNav">
+                <form id="catalogSearchForm" method="get" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
+                    <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
+                    <p>
+                       <label class="infield" for="searchInput">Search Catalog</label>
+                       <input type="text" name="query" id="searchInput" class="input-large" value="" />
+                       <input type="submit" id="searchButton" value="" />
+                    </p>
+                </form>
+                <div id="quicklinks">
+                    <div class="header">
+                        <div>
+                        Quick Links
                         </div>
-                        Service Item
-                        <br />
-                        Service Item
-                        <br />
-                        Service Item
-                        <br />
                     </div>
-                    <div id="contact">
-                        <div class="header">Contact</div>
-                        Name: Don Demo
-                        <br />
-                        Email: demo@demo.com
-                        <br />
-                        Phone: 612-555-5555
-                        <br />
-                        Department: IT
-                    </div>   
+                    Service Item
+                    <br />
+                    Service Item
+                    <br />
+                    Service Item
+                    <br />
                 </div>
-                <div id="searchSpinner">
-                    Searching for "<span class="searchValue"></span>"
-                    <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
-                </div>
-                <%-- SEARCH RESULTS VIEW --%>
-                <div id="searchResults">
-                </div>
-                <div id="tabs">
-                    <ul>
-                        <li><a href="#catalogContainer">Catalog</a></li>
-                        <li><a href="#Services">Services A - Z</a></li>
-                        <li><a href="#submissionsTable">Submissions</a></li>
-                    </ul>
-                    <%-- CATALOG VIEW --%>
-                    <div id="catalogContainer" class="clearfix">
-                        <%-- BREADCRUMBS VIEW --%>
-                        <div id="catalogBreadCrumbs">
-                            <div id="breadCrumbRoot" data-id="root" class="breadCrumb">
-                                Catalog
-                            </div>
+                <div id="contact">
+                    <div class="header">Contact</div>
+                    Name: Don Demo
+                    <br />
+                    Email: demo@demo.com
+                    <br />
+                    Phone: 612-555-5555
+                    <br />
+                    Department: IT
+                </div>   
+            </div>
+            <div id="searchSpinner">
+                Searching for "<span class="searchValue"></span>"
+                <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
+            </div>
+            <%-- SEARCH RESULTS VIEW --%>
+            <div id="searchResults">
+            </div>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#catalogContainer">Catalog</a></li>
+                    <li><a href="#Services">Services A - Z</a></li>
+                    <li><a href="#submissionsTable">Submissions</a></li>
+                </ul>
+                <%-- CATALOG VIEW --%>
+                <div id="catalogContainer" class="hidden clearfix">
+                    <%-- BREADCRUMBS VIEW --%>
+                    <div id="catalogBreadCrumbs">
+                        <div id="breadCrumbRoot" data-id="root" class="breadCrumb">
+                            Catalog
                         </div>
-                        <div id="nestedNav">
-                            <%-- TEMPLATES VIEW --%>
-                            <div id="templatesNav">
-                            </div>
-                            <div id="categoriesNavHeader" class="hidden"></div>
-                            <%-- CATAGORIES VIEW --%>
-                            <div id="categoriesNav">
-                                <% for (Category category : catalog.getRootCategories(context)) { %>
-                                    <% if (category.hasTemplates()) { %>
-                                    <div class="category" data-id="<%= category.getId()%>" data-name="<%= category.getName()%>">
-                                        <div class="name navigation">
-                                          <span class="arrow">></span>  <%= category.getName()%> 
-                                        </div>                            
-                                        <div class="description hidden">
-                                            <%= category.getDescription()%>
-                                        </div>
+                    </div>
+                    <div id="nestedNav">
+                        <%-- TEMPLATES VIEW --%>
+                        <div id="templatesNav">
+                        </div>
+                        <div id="categoriesNavHeader" class="hidden"></div>
+                        <%-- CATAGORIES VIEW --%>
+                        <div id="categoriesNav">
+                            <% for (Category category : catalog.getRootCategories(context)) { %>
+                                <% if (category.hasTemplates()) { %>
+                                <div class="category" data-id="<%= category.getId()%>" data-name="<%= category.getName()%>">
+                                    <div class="name navigation">
+                                      <span class="arrow">></span>  <%= category.getName()%> 
+                                    </div>                            
+                                    <div class="description hidden">
+                                        <%= category.getDescription()%>
                                     </div>
-                                    <%}%>
+                                </div>
                                 <%}%>
-                            </div>
-                        </div>
-                        <div id="nestedNavigationPreview" class="preview">
+                            <%}%>
                         </div>
                     </div>
-                    <%-- TEMPLATES VIEW --%>
-                    <div id="Services">
-                        <%-- BROWSE ALPHABETICALLY --%>
-                        <div id="browseAlphabetical" class="gradient">
-                            <div class="header">
-                                Browse Alphabetically
-                            </div>
-                            <div id="templatesAlphabetical-nav" class="templatesAlphabeticalNav">                        
-                            </div>
+                    <div id="nestedNavigationPreview" class="preview">
+                    </div>
+                </div>
+                <%-- TEMPLATES VIEW --%>
+                <div id="Services" class="hidden clearfix">
+                    <%-- BROWSE ALPHABETICALLY --%>
+                    <div id="browseAlphabetical" class="gradient">
+                        <div class="header">
+                            Browse Alphabetically
                         </div>
-                        <div class="clearfix"></div>
-                        <%-- TEMPLATES WITH EXISTING CATEGORIES DATA --%>
-                        <ul id="templatesAlphabetical">
-                        <% for(Template template : catalog.getTemplates(context)) { %>
-                            <% if (template.hasCategories()) {%>
-                            <li class="template">
-                                <div class="name">
-                                    <%= template.getName()%>
-                                </div>
-                                <div class="description">
-                                    <%= template.getDescription()%>
-                                    <a class="templateButton" href="<%= pathHelper.templateUrl(template.getId())%>">Request</a>
-                                </div>
-                            </li>
-                            <% }%>
+                        <div id="templatesAlphabetical-nav" class="templatesAlphabeticalNav">                        
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <%-- TEMPLATES WITH EXISTING CATEGORIES DATA --%>
+                    <ul id="templatesAlphabetical">
+                    <% for(Template template : catalog.getTemplates(context)) { %>
+                        <% if (template.hasCategories()) {%>
+                        <li class="template">
+                            <div class="name">
+                                <%= template.getName()%>
+                            </div>
+                            <div class="description">
+                                <%= template.getDescription()%>
+                                <a class="templateButton" href="<%= pathHelper.templateUrl(template.getId())%>">Request</a>
+                            </div>
+                        </li>
                         <% }%>
-                        </ul>
-                    </div>
-                    <%-- SUBMISSIONS VIEW --%>
-                    <div id="submissionsTable">
-                        <%-- SUBMISSION TABLE LINKS --%>
-                        <div id="submissionsNavigation">
-                            <% if (context != null) { %>
-                                <%-- For each of the submission group queries specified in the
-                                     common config.jsp file. --%>
-                                <% for (String groupName : submissionGroups.keySet()) { %>
-                                    <%-- Count the number of submissions that match the current query --%>
-                                    <% Integer count = ArsBase.count(context, "KS_SRV_CustomerSurvey_base", submissionGroups.get(groupName)); %>
-                                    <%-- If there are more than 0 records matching, display a link to the table. --%>
-                                    <% if (count > 0) { %>
-                                    <div data-group-name="<%=groupName%>" class="nav box"><%=count%> <%=groupName%></div>
-                                    <% }%>
+                    <% }%>
+                    </ul>
+                </div>
+                <%-- SUBMISSIONS VIEW --%>
+                <div id="submissionsTable" class="hidden clearfix">
+                    <%-- SUBMISSION TABLE LINKS --%>
+                    <div id="submissionsNavigation">
+                        <% if (context != null) { %>
+                            <%-- For each of the submission group queries specified in the
+                                 common config.jsp file. --%>
+                            <% for (String groupName : submissionGroups.keySet()) { %>
+                                <%-- Count the number of submissions that match the current query --%>
+                                <% Integer count = ArsBase.count(context, "KS_SRV_CustomerSurvey_base", submissionGroups.get(groupName)); %>
+                                <%-- If there are more than 0 records matching, display a link to the table. --%>
+                                <% if (count > 0) { %>
+                                <div data-group-name="<%=groupName%>" class="nav box"><%=count%> <%=groupName%></div>
                                 <% }%>
                             <% }%>
-                        </div>
-                        <div class="clearfix"></div>
-                        <%@include file="interface/fragments/tableControls.jspf"%>
-                        <div class="tableContainer hidden" id="tableContainerRequestsOpen"></div>
-                        <div class="tableContainer hidden" id="tableContainerRequestsClosed"></div>
-                        <div class="tableContainer hidden" id="tableContainerRequestsParked"></div>
-                        <div class="tableContainer hidden" id="tableContainerApprovalsPending"></div>
-                        <div class="tableContainer hidden" id="tableContainerApprovalsCompleted"></div>
+                        <% }%>
                     </div>
+                    <div class="clearfix"></div>
+                    <%@include file="interface/fragments/tableControls.jspf"%>
+                    <div class="tableContainer hidden" id="tableContainerRequestsOpen"></div>
+                    <div class="tableContainer hidden" id="tableContainerRequestsClosed"></div>
+                    <div class="tableContainer hidden" id="tableContainerRequestsParked"></div>
+                    <div class="tableContainer hidden" id="tableContainerApprovalsPending"></div>
+                    <div class="tableContainer hidden" id="tableContainerApprovalsCompleted"></div>
                 </div>
-                <div class="clearfix"></div>
             </div>
-            <%@include file="../../common/interface/fragments/contentFooter.jspf"%>
+            <div class="clearfix"></div>
         </div>
+        <%@include file="../../common/interface/fragments/contentFooter.jspf"%>
         <%-- BREADCRUMB APPEND DATA FOR NON-CATAGORY ITEMS --%>
         <div id="breadCrumbSearchResults" class="hidden">
             <div class="breadCrumb">
