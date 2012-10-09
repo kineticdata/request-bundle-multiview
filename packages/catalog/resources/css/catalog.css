@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/**
+ * Catalog Container
+ */
+#catalogContainer {
+    width: 780px;
+    margin-left: 0;
+    float: left;
+    min-height: 1px;
+}
+
+/**
+ * Preview of templates
+ */
+#preview {
+   width: 500px;
+   margin: 22px 0px 0px 10px;
+   float: left;
+   min-height: 1px;
+}
+
+/**
+ * Nested Categories Navigation
+ */
+#nestedNav {
+    width: 260px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    float: left;
+    min-height: 1px;
+    padding: 15px 0px 0px 0px;
+}
+
+#categoriesNavHeader {
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin: 0px 0px 0px 10px;
+}
+ 
+#categoriesNav .category .name {
+    padding: 5px 0px 5px 15px; 
+    font-weight: bold;
+    width: auto;
+}
+
+#categoriesNav .category .name:hover {
+    cursor: pointer;
+    padding: 5px 0 5px 15px;
+    width: auto;
+}
+
+#categoriesNav .category .arrow {
+    float: right;
+    margin: 1px 5px 0px 0px;
+    position: relative;
+}
+
+/**
+ * Templates Navigation
+ */
+#templatesNav .template .name {
+    padding: 5px 0px 5px 15px;
+    width: auto;
+}
+
+#templatesNav .template .name:hover {
+    padding: 5px 0 5px 15px;
+    cursor: pointer;
+    width: auto;
+}
+
+/**
+ * Bread Crumbs
+ */
+#catalogBreadCrumbs {
+   width: 923px;
+   height: 24px;
+   margin: 0px 0px 0px 8px;
+}
+
+#catalogBreadCrumbs .breadCrumb {
+    float: left;
+    padding: 2px 5px 0px 5px;
+    height: 22px;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+#catalogBreadCrumbs .breadCrumb:hover {
+    cursor: pointer;
+}
+
+#catalogBreadCrumbs .breadCrumbArrow {
+    margin: 0px 0px 0px 8px;
+    position: relative;
+}
+
+/**
+ * Submission Navigation
+ */
+#sideNav {
+   float: left;
+   width: 160px;
+   min-height: 1px;
+   margin: 10px 0px 0px 0px;
+}
+
+#sideNav .nav {
+    padding: 0px 0px 0px 5px;
+    margin-top: 30px;
+}
+
+#sideNav .nav:hover {
+    padding: 0px 0px 0px 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/**
+ * Search Form
+ */
+form p { 
+    position:relative;
+}
+
+label  {
+    margin: 2px 0px 0px 10px;
+    position:absolute; 
+    top:0; 
+    left:0;
+    font-size: 12px;
+}
+
+.input-large{
+    width: 120px;
+}
+
+#searchButton  {
+    background: url("../images/magnify.png") no-repeat scroll 0px 0px transparent;
+    border: none;
+    cursor: pointer;
+    height: 22px;
+    letter-spacing: -9999px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0px 0px 5px 0px;
+    position: relative;
+    text-indent: -9999px;
+    width: 22px;
+    z-index: 3;
+}

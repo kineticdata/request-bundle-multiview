@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+body {
+    padding: 0;
+}
+
+.contentHeader {
+    position: static;
+}
+
+.serviceItemDescriptionHeader {
+    background-color: #009900;
+    height: 22px;
+    margin: 0px 0px 0px 0px;
+    padding: 2px 0px 0px 5px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+}
+
+textarea {
+    width: 600px;
+}
+
+#pageQuestionsForm {   
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+.questionLabel {
+    color: #333333;
+    float: left;
+    width: 200px;
+}
+
+.preRequiredLabel {
+    font-weight: bold;
+}
+
+.questionAnswer {
+    margin-left: 200px;
+}
+
+.questionLayer {
+    padding: 3px;
+}
+
+.questionLayer:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+*.questionLayer {
+    /* for IE 6/7 */
+    zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+}
+
+.dynamicText {
+    padding: 10px 3px;
+}
+
+.primaryColorHeader {
+    height: 22px;
+    margin: 0px 0px 0px 0px;
+    padding: 2px 0px 0px 5px;
+    font-weight: bold;
+    background-color: #99CC99;
+    color: #FFFFFF;
+}
+
+.subtitle {
+    border-top: 1px solid #A1A1A1;
+    color: #A1A1A1;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.title {
+    color: #3B6E9C;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.description {
+    color: #616161;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.requiredLabel  {
+    color: #FF0000 !important;
+}
+
+.templateContent {
+    background-color: #F5F5F5;
+    padding: 4px;
+}
+
+.preRequiredLabel:before {
+    color: red !important;
+    content: "* ";
+}
+
+/*
+ * Styles for the table panel displayed for set fields external events
+*/
+table.resultsTableAdv {
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+}
+
+table.resultsTableAdv td {
+    border-bottom: 1px solid #A0A0A0;
+}
+
+table.resultsTableAdv tr#headerRow {
+    color: #3B6E9C;
+}
+
+table.resultsTableAdv tr.row_odd {
+    background: #FFFFFF;
+}
+
+table.resultsTableAdv tr.row_even {
+    background: #F6F6F6;
+}
+
+table.resultsTableAdv tr.resultsTableHover {
+    background: #E0E0FF;
+    cursor: pointer;
+}
