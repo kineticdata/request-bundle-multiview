@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body {
+    padding-top: 0;
+}
+
+.contentHeader img.logo {
+    width: 173px;
+    height: 58px;
+}

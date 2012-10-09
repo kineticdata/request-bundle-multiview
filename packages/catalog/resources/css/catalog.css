@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/**
+ * Tabs
+ */
+#tabs {
+    float: left;
+    width: 800px;
+}
+ 
+/**
+ * Catalog Container
+ */
+#catalogContainer {
+    margin-left: 0;
+    min-height: 1px;
+    padding: 10px 0px 10px 0px;
+}
+
+/**
+ * Nested Categories Navigation
+ */
+#nestedNav {
+    width: 260px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    float: left;
+    min-height: 1px;
+    padding: 15px 0px 0px 0px;
+}
+
+#categoriesNavHeader {
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin: 0px 0px 0px 10px;
+}
+ 
+#categoriesNav .category .name {
+    padding: 5px 0px 5px 15px; 
+    font-weight: bold;
+    width: auto;
+}
+
+#categoriesNav .category .name:hover {
+    cursor: pointer;
+    padding: 5px 0 5px 15px;
+    width: auto;
+}
+
+#categoriesNav .category .arrow {
+    float: right;
+    margin: 1px 5px 0px 0px;
+    position: relative;
+}
+
+#nestedNavigationPreview {
+   width: 500px;
+   margin: 22px 0px 0px 10px;
+   float: left;
+   min-height: 1px;
+}
+
+/**
+ * Templates navigation
+ */
+#templatesNav .template .name {
+    padding: 5px 0px 5px 15px;
+    width: auto;
+}
+
+#templatesNav .template .name:hover {
+    padding: 5px 0 5px 15px;
+    cursor: pointer;
+    width: auto;
+}
+
+/**
+ * Bread Crumbs
+ */
+#catalogBreadCrumbs {
+   height: 24px;
+   margin: 0px 10px 0px 10px;
+}
+
+#catalogBreadCrumbs .breadCrumb {
+    float: left;
+    padding: 2px 5px 0px 5px;
+    height: 22px;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+#catalogBreadCrumbs .breadCrumb:hover {
+    cursor: pointer;
+}
+
+#catalogBreadCrumbs .breadCrumbArrow {
+    margin: 0px 0px 0px 8px;
+    position: relative;
+}
+
+/**
+ * Side Navigation with search
+ */
+#sideNav {
+   float: left;
+   width: 180px;
+   min-height: 1px;
+   margin: 0px 5px 0px 5px;
+}
+
+
+
+/**
+ * Search Form
+ */
+form p { 
+    position:relative;
+    margin: 0;
+    padding: 0;
+}
+
+label  {
+    margin: 2px 0px 0px 10px;
+    position:absolute; 
+    top:0; 
+    left:0;
+    font-size: 12px;
+}
+
+.input-large{
+    width: 140px;
+}
+
+#searchButton  {
+    background: url("../images/magnify.png") no-repeat scroll 0px 0px transparent;
+    border: none;
+    cursor: pointer;
+    height: 22px;
+    letter-spacing: -9999px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0px 0px 5px 0px;
+    position: relative;
+    text-indent: -9999px;
+    width: 22px;
+    z-index: 3;
+}
+
+
+
+
+/**
+ * @TODO css below will nead some cleaning and colors need to be pulled 
+ * into common for theming
+ */
+
+
+
+/**
+ * Alphabetical Navigation
+ */
+.templatesAlphabeticalNav {
+    margin: 10px;
+}
+
+.listNav { 
+    margin:0 0 10px; 
+}
+
+.ln-letters { 
+    overflow:hidden; 
+}
+
+.ln-letters a { 
+    font-size:0.9em; 
+    display:block; 
+    float:left; 
+    padding:2px 4px; 
+    /* border:1px solid silver; */
+    border-right:none; 
+    text-decoration:none;
+    color: #006699;
+}
+
+.ln-letters a.ln-last { 
+    /* border-right:1px solid silver; */ 
+}
+
+.ln-letters a:hover,
+.ln-letters a.ln-selected { 
+    background-color:#eaeaea; 
+}
+
+.ln-letters a.ln-disabled { 
+    color:#ccc; 
+}
+
+.ln-letter-count { 
+    text-align:center; 
+    font-size:0.8em; 
+    line-height:1; 
+    margin-bottom:3px; 
+    color: #009999;
+}
+
+
+
+#Services {
+    min-height: 1px;
+    margin: 0;
+}
+
+#browseAlphabetical {
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+}
+
+#templatesAlphabetical .template {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px 5px 5px 5px;
+    margin: 10px;
+}
+
+#templatesAlphabetical ul, li {
+    list-style-type: none;
+}
+
+#templatesAlphabetical .ln-no-match {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+}
+
+
+
+/**
+ * Submissions nav
+ */
+#submissionsNavigation {
+     
+}
+
+#submissionsNavigation .nav {
+    float: left;
+    min-width: 20;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#submissionsNavigation .nav:hover {
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+#quicklinks, #contact {
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.header {
+    padding: 2px 4px 2px 4px;
+}

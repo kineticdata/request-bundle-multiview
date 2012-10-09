@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.templateButton, .templateButton:link {
+    padding: 2px 8px;
+}

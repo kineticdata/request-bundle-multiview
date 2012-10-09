@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/**
+ * Form controls
+ */
+input {
+    margin: 0;
+    padding: 0;
+}
+select {
+    margin: 0;
+    padding: 0;
+}
+
+input[type='text'] {
+    margin-bottom: 0;
+}
+
+/**
+ * Submissions
+ */
+#submissionsTable {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 0px 5px 0px 5px;
+}
+
+#submissionsTable .tableContainer {
+}
+
+/**
+ * Table
+ */
+table.kd-table {
+    margin: 10px 0;
+    width: 100%;
+}
+
+table.kd-table th, table.kd-table td {
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+}
+
+table.kd-table th {
+    cursor: pointer;
+}
+
+/**
+ * Controls
+ */
+.controls {
+    float: right;
+}
+
+.control {
+    float: left;
+    margin-left: 10px;
+}
+
+.button {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.control.pageNumber input {
+    text-align: center;
+    width: 30px;
+}
+
+/**
+ * Submission Details
+ */
+.submissionDetails {
+    background-color: #FFFFFF;
+    padding: 5px;
+    overflow-y: scroll;
+}
+.submissionDetails .header {
+    background-color: #A1A1A1;
+    color: white;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.submissionDetails .header a {
+    text-decoration: none;
+    color: white;
+}
+.submissionDetails .header a:hover {
+    color: #006699;
+    text-decoration: underline;
+}
+.submissionDetails .header .serviceItem {
+    margin-right: 150px;
+}
+.submissionDetails .header .requestId {
+    float: right;
+    text-align: right;
+    width: 150px;
+}
+.submissionDetails .info {
+    padding: 5px;
+}
+.submissionDetails .cancel {
+    text-align: right;
+}
+.submissionDetails .label {
+    float: left;
+    font-weight: bold;
+    width: 150px;
+}
+.submissionDetails .value {
+    margin-left: 150px;
+}
+.submissionDetails .tasks .task {
+    border: 1px solid #C8C8C8;
+    margin-top: 5px;
+    padding: 5px;
+}
+.submissionDetails .tasks .task.odd {
+    background-color: #E9E9E9;
+}
+.submissionDetails .tasks .task.even {
+    background-color: #F9F9F9;
+}
