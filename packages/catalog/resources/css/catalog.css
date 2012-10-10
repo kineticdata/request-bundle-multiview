@@ -114,13 +114,18 @@
 /**
  * Search Form
  */
-form p { 
+#catalogSearchForm {
+   margin: 10px 10px 10px 10px;
+   padding: 10px 10px 10px 10px;
+}
+
+#catalogSearchForm p { 
     position:relative;
     margin: 0;
     padding: 0;
 }
 
-label  {
+#catalogSearchForm label  {
     margin: 2px 0px 0px 10px;
     position:absolute; 
     top:0; 
@@ -257,7 +262,7 @@ label  {
 
 
 #quicklinks, #contact {
-    margin: 10px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     padding: 5px;
     border-style: solid;
     border-width: 1px;

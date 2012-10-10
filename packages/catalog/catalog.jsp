@@ -39,14 +39,6 @@
         <div class="container clearfix">
             <%-- SIDEBAR VIEW --%>
             <div id="sideNav">
-                <form id="catalogSearchForm" method="post" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
-                    <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
-                    <p>
-                       <label class="infield" for="searchInput">Search Catalog</label>
-                       <input type="text" name="query" id="searchInput" class="input-large" value="" />
-                       <input type="submit" id="searchButton" value="" />
-                    </p>
-                </form>
                 <div id="quicklinks">
                     <div class="header">
                         <div>
@@ -71,17 +63,11 @@
                     Department: IT
                 </div>   
             </div>
-            <div id="searchSpinner">
-                Searching for "<span class="searchValue"></span>"
-                <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
-            </div>
-            <%-- SEARCH RESULTS VIEW --%>
-            <div id="searchResults">
-            </div>
             <div id="tabs">
                 <ul>
                     <li><a href="#catalogContainer">Catalog</a></li>
-                    <li><a href="#Services">Services A - Z</a></li>
+                    <li><a href="#services">Services A - Z</a></li>
+                    <li><a href="#searchServices">Search Services</a></li>
                     <li><a href="#submissionsTable">Submissions</a></li>
                 </ul>
                 <%-- CATALOG VIEW --%>
@@ -117,7 +103,7 @@
                     </div>
                 </div>
                 <%-- TEMPLATES VIEW --%>
-                <div id="Services" class="hidden clearfix">
+                <div id="services" class="hidden clearfix">
                     <%-- BROWSE ALPHABETICALLY --%>
                     <div id="browseAlphabetical" class="gradient">
                         <div class="header">
@@ -143,6 +129,23 @@
                         <% }%>
                     <% }%>
                     </ul>
+                </div>
+                <div id="searchServices" class="hidden clearfix">
+                    <form id="catalogSearchForm" class="gradient" method="post" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
+                        <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
+                        <p>
+                           <label class="infield" for="searchInput">Search Catalog</label>
+                           <input type="text" name="query" id="searchInput" class="input-large" value="" />
+                           <input type="submit" id="searchButton" value="" />
+                        </p>
+                    </form>
+                    <div id="searchSpinner">
+                        Searching for "<span class="searchValue"></span>"
+                        <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
+                    </div>
+                    <%-- SEARCH RESULTS VIEW --%>
+                    <div id="searchResults">
+                    </div>
                 </div>
                 <%-- SUBMISSIONS VIEW --%>
                 <div id="submissionsTable" class="hidden clearfix">

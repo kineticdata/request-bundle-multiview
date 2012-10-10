@@ -26,9 +26,6 @@ jQuery(document).ready(function() {
      */
     function before(jqXHR, settings) {
         jQuery.blockUI({ message: '<h1>Loading...</h1>' });
-        jQuery('#loadingControl').hide();
-        jQuery('#tabs').hide();
-        jQuery('#submissionsTable').hide();
         jQuery('#searchResults').hide();
         jQuery('#searchSpinner').show();
         
@@ -38,15 +35,10 @@ jQuery(document).ready(function() {
         if(data) {
             jQuery('#searchSpinner').hide();
             jQuery('#searchResults').html(data).show();
-            jQuery('#loadingControl').fadeIn();
             jQuery.unblockUI();
-            jQuery('#searchBack').on('click', '.header', function() {
-                jQuery('#searchResults').hide();
-                jQuery('#tabs').show();
-            });
             // Retrieve the search value from the search input
             var searchValue = jQuery('#searchInput').val();
-            jQuery('#searchBack').append('<span class="breadCrumbArrow">> Search Results:<span class="searchValue">'+searchValue+'</span></span>');
+            jQuery('#searchFor').append('Search Results:<span class="searchValue">&nbsp;'+searchValue+'</span>');
         }
     }
 
@@ -54,6 +46,5 @@ jQuery(document).ready(function() {
         jQuery.unblockUI();
         jQuery('#searchSpinner').hide();
         jQuery('#searchResults').html('<div class="message">There was an error. Try again.</div>').show();
-        jQuery('#loadingControl').fadeIn();
     }
 });

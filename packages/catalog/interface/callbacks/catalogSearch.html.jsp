@@ -53,8 +53,7 @@
             out.println("<div class=\"message\">No results were found.</div>");
         } else {
 %>
-<div id="searchBack">
-    <div class="header" style="margin: 0px 0px 10px 0px; float: left;">Back</div>
+<div id="searchFor" class="header clearfix" style="margin: 0px 10px 10px 10px;">
 </div>
 <div class="templates">
     <% for (int i = 0; i < matchingTemplates.length; i++) {%>
