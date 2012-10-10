@@ -465,22 +465,18 @@ select:focus:required:invalid:focus {
 }
 
 /**
- * Clearfixes
+ * Clearfixe
  */
-.clearfix {
-    *zoom: 1;
-}
-
-.clearfix:before,
 .clearfix:after {
-    display: table;
-    line-height: 0;
-    content: "";
-}
-
-.clearfix:after {
-    clear: both;
-}
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 /**
  * Display none

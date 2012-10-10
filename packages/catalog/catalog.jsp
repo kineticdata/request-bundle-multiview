@@ -78,7 +78,7 @@
                             Catalog
                         </div>
                     </div>
-                    <div id="nestedNav">
+                    <div id="nestedNav" class="borderRight">
                         <%-- TEMPLATES VIEW --%>
                         <div id="templatesNav">
                         </div>
@@ -99,7 +99,7 @@
                             <%}%>
                         </div>
                     </div>
-                    <div id="nestedNavigationPreview" class="clearfix borderLeft borderRight borderBottom gradient">
+                    <div id="nestedNavigationPreview" class="clearfix">
                     </div>
                 </div>
                 <%-- TEMPLATES VIEW --%>
