@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 /**
+ * Header
+ */
+.header {
+    padding: 2px 4px 2px 4px;
+}
+
+/**
  * Tabs
  */
 #tabs {
@@ -105,7 +112,13 @@
    margin: 0px 5px 0px 5px;
 }
 
-
+/**
+ * Quick links, contact
+ */
+#quicklinks, #contact {
+    margin: 0px 0px 10px 0px;
+    padding: 5px;
+}
 
 /**
  * Search Form
@@ -129,11 +142,11 @@
     font-size: 12px;
 }
 
-.input-large{
+#catalogSearchForm .input-large{
     width: 140px;
 }
 
-#searchButton  {
+#catalogSearchForm #searchButton  {
     background: url("../images/magnify.png") no-repeat scroll 0px 0px transparent;
     border: none;
     cursor: pointer;
@@ -148,98 +161,65 @@
     z-index: 3;
 }
 
-
-
-
-/**
- * @TODO css below will nead some cleaning and colors need to be pulled 
- * into common for theming
- */
-
-
-
 /**
  * Alphabetical Navigation
  */
-.templatesAlphabeticalNav {
-    margin: 10px;
-}
-
-.listNav { 
-    margin:0 0 10px; 
-}
-
-.ln-letters { 
-    overflow:hidden; 
-}
-
-.ln-letters a { 
-    font-size:0.9em; 
-    display:block; 
-    float:left; 
-    padding:2px 4px; 
-    /* border:1px solid silver; */
-    border-right:none; 
-    text-decoration:none;
-    color: #006699;
-}
-
-.ln-letters a.ln-last { 
-    /* border-right:1px solid silver; */ 
-}
-
-.ln-letters a:hover,
-.ln-letters a.ln-selected { 
-    background-color:#eaeaea; 
-}
-
-.ln-letters a.ln-disabled { 
-    color:#ccc; 
-}
-
-.ln-letter-count { 
-    text-align:center; 
-    font-size:0.8em; 
-    line-height:1; 
-    margin-bottom:3px; 
-    color: #009999;
-}
-
-
-
-#Services {
+#ServicesAZ {
     min-height: 1px;
     margin: 0;
 }
 
-#browseAlphabetical {
+#ServicesAZ #browseAlphabetical {
     margin: 10px 10px 10px 10px;
     padding: 5px;
 }
 
-#templatesAlphabetical .template {
+#ServicesAZ #templatesAlphabetical .template {
     padding: 5px 5px 5px 5px;
     margin: 10px;
 }
 
-#templatesAlphabetical ul, li {
+#ServicesAZ #templatesAlphabetical ul, li {
     list-style-type: none;
 }
 
-#templatesAlphabetical .ln-no-match {
+#ServicesAZ .templatesAlphabeticalNav {
+    margin: 10px;
+}
+
+#ServicesAZ .listNav { 
+    margin:0 0 10px; 
+}
+
+#ServicesAZ .ln-letters { 
+    overflow:hidden; 
+}
+
+#ServicesAZ .ln-letters a { 
+    font-size:11px; 
+    display:block; 
+    float:left; 
+    padding:2px 4px; 
+    border-right:none; 
+    text-decoration:none; 
+}
+
+#ServicesAZ .ln-letter-count { 
+    text-align:center; 
+    font-size: 11px; 
+    line-height:1; 
+    margin-bottom:3px;   
+}
+
+#ServicesAZ .ln-no-match {
     text-align: center;
     color: red;
     font-size: 14px;
 }
 
-
-
 /**
  * Submissions nav
  */
-#submissionsNavigation {  
-}
-
 #submissionsNavigation .nav {
     float: left;
     min-width: 20px;
@@ -248,52 +228,5 @@
 }
 
 #submissionsNavigation .nav:hover {
-    background-color: #009900;
-    color: #FFFFFF;
     cursor: pointer;
-}
-
-#submissionsNavigation .active {
-    background-color: #009900;
-    color: #FFFFFF;
-}
-
-#quicklinks, #contact {
-    margin: 0px 0px 10px 0px;
-    padding: 5px;
-}
-
-
-.header {
-    padding: 2px 4px 2px 4px;
-}
-
-.border {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #AAAAAA;
-}
-
-.borderRight {
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-right-color: #AAAAAA;
-}
-
-.borderLeft {
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-left-color: #AAAAAA;
-}
-
-.borderTop {
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #AAAAAA;
-}
-
-.borderBottom {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #AAAAAA;
 }

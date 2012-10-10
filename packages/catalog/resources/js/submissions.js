@@ -183,7 +183,7 @@ jQuery(document).ready(function() {
         jQuery(activeTable.container).show();
         jQuery('#submissionsTable').fadeIn();
         // Highlight selected submission
-        activeNavigation('.nav', jQuery('#submissionsNavigation .nav:first-child'), 'active');
+        activeNavigation('.nav', jQuery('#submissionsNavigation .nav:first-child'), 'boxActive');
     });
     
     jQuery('#submissionsNavigation').on('click', '.nav', function() {
@@ -194,7 +194,7 @@ jQuery(document).ready(function() {
         jQuery(activeTable.container).show();
         jQuery('#submissionsTable').fadeIn();      
         // Highlight selected submission
-        activeNavigation('.nav', this, 'active');
+        activeNavigation('.nav', this, 'boxActive');
     });
     
     /**

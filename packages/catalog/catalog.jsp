@@ -66,7 +66,7 @@
             <div id="tabs">
                 <ul>
                     <li><a href="#catalogContainer">Catalog</a></li>
-                    <li><a href="#services">Services A - Z</a></li>
+                    <li><a href="#ServicesAZ">Services A - Z</a></li>
                     <li><a href="#searchServices">Search Services</a></li>
                     <li><a id="submissionsTab" href="#submissionsTable">Submissions</a></li>
                 </ul>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <%-- TEMPLATES VIEW --%>
-                <div id="services" class="hidden clearfix">
+                <div id="ServicesAZ" class="hidden clearfix">
                     <%-- BROWSE ALPHABETICALLY --%>
                     <div id="browseAlphabetical" class="border gradient">
                         <div class="header">

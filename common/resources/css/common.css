@@ -3,23 +3,25 @@
 /* START COLOR CONFIGURATION */
 body { background-color: #E6E6E6; color: #333333; }
 
-/* Link colors */
+/* Link */
 a:active, a:focus, a:link { color: #3D6699; }
 
-/* Submission tabs, logout, logged in as colors */
-.box, .box:active, .box:hover { background-color: #006699; color: #FFFFFF; }
+/* Submission tabs, logout, logged in as */
+.box { background-color: #006699; color: #FFFFFF; }
+.box:active, .box:hover { background-color: #009900; color: #FFFFFF; }
+.boxActive { background-color: #009900; color: #FFFFFF; }
 
-/* Header colors */
+/* Header */
 .header { background-color: #009900; color: #FFFFFF; }
 
 /* Description  */
 .subHeader { background-color: #99CC99; color: #FFFFFF; }
 
-/* Breadcrumbs colors */
+/* Breadcrumbs */
 #catalogBreadCrumbs { background-color: #99CC99; color: #FFFFFF; }
 #catalogBreadCrumbs .breadCrumb { background-color: #009900; color: #FFFFFF; }
 
-/* Catalog Navigation Colors */
+/* Catalog Navigation */
 #categoriesNav .navigation,
 #templatesNav .navigation {
     color: #000000;
@@ -34,14 +36,24 @@ a:active, a:focus, a:link { color: #3D6699; }
     background-color: #FFFFFF;
 }
 
-/* Search colors */
+/* Search */
 #searchResults .highlighted { background: yellow; color: #000000; }
 #searchResults .message { color: #FF0000; }
 #searchResults .templateName a { color: #FFFFFF; }
 #searchSpinner { color: #3B6E9C; }
 #searchResults .templateDescription { color: #616161; }
 
+/* A-Z */
+.ln-letters a { color: #006699; }
+.ln-letters a:hover, .ln-letters a.ln-selected { background-color:#eaeaea; }
+.ln-letters a.ln-disabled { color:#ccc; }
+.ln-letter-count { color: #009999; }
+.ln-no-match { color: red; }
+
+
 /* Submissions */
+
+
 table.kd-table th, table.kd-table td { border-color: #7F7F7F; }
 table.kd-table th {
     background: #F4F5F5; /* Old browsers */
@@ -75,15 +87,22 @@ table.kd-table tr:hover a { color: #006699; }
 
 /* Gradient styles */
 .gradient {
-    background: #e5e5e5; /* Old browsers */
-    background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background: #FFFFFF; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e5e5e5 0%, #FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e5e5e5 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e5e5e5 0%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e5e5e5 0%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e5e5e5 0%,#FFFFFF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
 }
+
+/* Borders */
+.border { border-style: solid; border-width: 1px; border-color: #AAAAAA; }
+.borderRight { border-right-style: solid; border-right-width: 1px; border-right-color: #AAAAAA; }
+.borderLeft { border-left-style: solid; border-left-width: 1px; border-left-color: #AAAAAA; }
+.borderTop { border-top-style: solid; border-top-width: 1px; border-top-color: #AAAAAA; }
+.borderBottom { border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #AAAAAA; }
 
 /* END COLOR CONFIGURATION */
 
@@ -465,7 +484,7 @@ select:focus:required:invalid:focus {
 }
 
 /**
- * Clearfixe
+ * Clearfix
  */
 .clearfix:after {
 	visibility: hidden;
