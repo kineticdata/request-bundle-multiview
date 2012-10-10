@@ -75,7 +75,6 @@ table.kd-table tr:hover a { color: #006699; }
 
 /* Gradient styles */
 .gradient {
-    border: 1px solid #999999;
     background: #e5e5e5; /* Old browsers */
     background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */

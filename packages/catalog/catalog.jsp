@@ -39,7 +39,7 @@
         <div class="container clearfix">
             <%-- SIDEBAR VIEW --%>
             <div id="sideNav">
-                <div id="quicklinks">
+                <div id="quicklinks" class="border gradient">
                     <div class="header">
                         <div>
                         Quick Links
@@ -52,7 +52,7 @@
                     Service Item
                     <br />
                 </div>
-                <div id="contact">
+                <div id="contact" class="border gradient">
                     <div class="header">Contact</div>
                     Name: Don Demo
                     <br />
@@ -82,7 +82,7 @@
                         <%-- TEMPLATES VIEW --%>
                         <div id="templatesNav">
                         </div>
-                        <div id="categoriesNavHeader" class="hidden"></div>
+                        <div id="categoriesNavHeader" class="hidden borderTop"></div>
                         <%-- CATAGORIES VIEW --%>
                         <div id="categoriesNav">
                             <% for (Category category : catalog.getRootCategories(context)) { %>
@@ -99,13 +99,13 @@
                             <%}%>
                         </div>
                     </div>
-                    <div id="nestedNavigationPreview" class="preview">
+                    <div id="nestedNavigationPreview" class="clearfix borderLeft borderRight borderBottom gradient">
                     </div>
                 </div>
                 <%-- TEMPLATES VIEW --%>
                 <div id="services" class="hidden clearfix">
                     <%-- BROWSE ALPHABETICALLY --%>
-                    <div id="browseAlphabetical" class="gradient">
+                    <div id="browseAlphabetical" class="border gradient">
                         <div class="header">
                             Browse Alphabetically
                         </div>
@@ -117,7 +117,7 @@
                     <ul id="templatesAlphabetical">
                     <% for(Template template : catalog.getTemplates(context)) { %>
                         <% if (template.hasCategories()) {%>
-                        <li class="template">
+                        <li class="template border gradient">
                             <div class="name">
                                 <%= template.getName()%>
                             </div>
@@ -131,7 +131,7 @@
                     </ul>
                 </div>
                 <div id="searchServices" class="hidden clearfix">
-                    <form id="catalogSearchForm" class="gradient" method="post" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
+                    <form id="catalogSearchForm" class="border gradient" method="post" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
                         <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
                         <p>
                            <label class="infield" for="searchInput">Search Catalog</label>
@@ -220,7 +220,6 @@
                         </div>
                         <% }%>
                     <% }%>
-                    <div class="clearfix"></div>
                 </div>
                 <% }%>
                 <%-- TEMPLATES DATA --%>
