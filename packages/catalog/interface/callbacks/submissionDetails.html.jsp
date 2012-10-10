@@ -23,23 +23,23 @@
         </div>
         <div class="serviceItem"><%= submission.getTemplateName()%></div>
         <div class="close"></div>
-        <div class="clear"></div>
+        <div class="clearfix"></div>
     </div>
     <div class="info">
         <div class="label">Status</div>
         <div class="value"><%= submission.getValiationStatus()%></div>
-        <div class="clear"></div>
+        <div class="clearfix"></div>
         <div class="label">Initiated</div>
         <div class="value"><%= DateHelper.formatDate(submission.getCreateDate(), request.getLocale())%></div>
-        <div class="clear"></div>
+        <div class="clearfix"></div>
         <% if (submission.getRequestStatus().equals("Closed")) {%>
         <div class="label">Completed</div>
         <div class="value"><%= DateHelper.formatDate(submission.getRequestClosedDate(), request.getLocale())%></div>
-        <div class="clear"></div>
+        <div class="clearfix"></div>
         <%}%>
         <div class="label">Notes</div>
         <div class="value"><%= submission.getNotes()%></div>
-        <div class="clear"></div>
+        <div class="clearfix"></div>
     </div>
 
     <div class="tasks">
@@ -49,17 +49,17 @@
         <div class="task <%= zebraCycle.cycle()%>">
             <div class="label">Task</div>
             <div class="value"><%= task.getName()%></div>
-            <div class="clear"></div>
+            <div class="clearfix"></div>
             <div class="label">Status</div>
             <div class="value"><%= task.getStatus()%></div>
-            <div class="clear"></div>
+            <div class="clearfix"></div>
             <div class="label">Initiated</div>
             <div class="value"><%= DateHelper.formatDate(task.getCreateDate(), request.getLocale())%></div>
-            <div class="clear"></div>
+            <div class="clearfix"></div>
             <% if (task.getStatus().equals("Closed")) {%>
             <div class="label">Completed</div>
             <div class="value"><%= DateHelper.formatDate(task.getModifiedDate(), request.getLocale())%></div>
-            <div class="clear"></div>
+            <div class="clearfix"></div>
             <%}%>
             <div class="label">Messages</div>
             <div class="value">
@@ -67,7 +67,7 @@
                 <div class="message"><%= message.getMessage()%></div>
                 <% }%>
             </div>
-            <div class="clear"></div>
+            <div class="clearfix"></div>
         </div>
         <% }%>
         <% }%>
