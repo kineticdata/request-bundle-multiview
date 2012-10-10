@@ -27,7 +27,6 @@
         <link rel="stylesheet" href="<%= bundle.packagePath()%>resources/css/catalogSearch.css" type="text/css" />
         <link rel="stylesheet" href="<%= bundle.packagePath()%>resources/css/submissions.css" type="text/css" />
         <!-- Page Javascript -->
-        <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/jquery.form.js"></script>
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/jquery.listnav.min-2.1.js"></script>
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/catalogSearch.js"></script>
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/catalog.js"></script>
@@ -40,7 +39,7 @@
         <div class="container clearfix">
             <%-- SIDEBAR VIEW --%>
             <div id="sideNav">
-                <form id="catalogSearchForm" method="get" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
+                <form id="catalogSearchForm" method="post" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
                     <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
                     <p>
                        <label class="infield" for="searchInput">Search Catalog</label>

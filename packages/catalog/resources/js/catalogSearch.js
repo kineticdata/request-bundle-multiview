@@ -1,45 +1,30 @@
 jQuery(document).ready(function() {
-    // Setup initial ajaxForm state for catelog search
-    var searchForm = '#catalogSearchForm';
-    formSubmissionInit(
-        searchForm,
-        'html', 
-        before, 
-        success,
-        error
-    );
-        
-    /**
-     * Form Initializer for ajaxSubmit
-     * 
-     * @param formSelector string
-     * @param dataType string
-     * @param beforeSend function
-     * @param success function
-     * @param error function
-     * 
-     * @author Andre Crouch
-     */
-    function formSubmissionInit(formSelector, dataType, beforeSend, success, error) {
-       jQuery(formSelector).ajaxForm({
-            dataType: dataType,
-            beforeSend: function() {
-                beforeSend();
+    // Click event for search
+    jQuery('#catalogSearchForm').submit(function(event) {
+        // Prevent default action.
+        event.preventDefault();
+        // Execute the ajax request.
+        BUNDLE.ajax({
+            cache: false,
+            type: 'post',
+            data: jQuery(this).serialize(),
+            url: jQuery(this).attr('action'),
+            beforeSend: function(jqXHR, settings) {
+                before(jqXHR, settings);
             },
             success: function(data) {
                 success(data);
             },
-            error: function() {
-                error();
-            } 
-        }); 
-    }
+            error: function(jqXHR, textStatus, errorThrown) {
+                error(jqXHR, textStatus, errorThrown);
+            }
+        });
+    });
 
     /**
      * Action functions for catalog search
-     * @author Andre Crouch
      */
-    function before() {
+    function before(jqXHR, settings) {
         jQuery.blockUI({ message: '<h1>Loading...</h1>' });
         jQuery('#loadingControl').hide();
         jQuery('#tabs').hide();
@@ -65,10 +50,10 @@ jQuery(document).ready(function() {
         }
     }
 
-    function error() {
+    function error(jqXHR, textStatus, errorThrown) {
+        jQuery.unblockUI();
         jQuery('#searchSpinner').hide();
         jQuery('#searchResults').html('<div class="message">There was an error. Try again.</div>').show();
         jQuery('#loadingControl').fadeIn();
-        jQuery.unblockUI();
     }
 });
