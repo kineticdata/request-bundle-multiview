@@ -243,23 +243,26 @@
 /**
  * Submissions nav
  */
-#submissionsNavigation {
-     
+#submissionsNavigation {  
 }
 
 #submissionsNavigation .nav {
     float: left;
-    min-width: 20;
+    min-width: 20px;
     padding: 5px;
-    margin-top: 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 #submissionsNavigation .nav:hover {
-    padding: 5px;
-    margin-top: 10px;
+    background-color: #009900;
+    color: #FFFFFF;
     cursor: pointer;
 }
 
+#submissionsNavigation .active {
+    background-color: #009900;
+    color: #FFFFFF;
+}
 
 #quicklinks, #contact {
     margin: 0px 0px 10px 0px;

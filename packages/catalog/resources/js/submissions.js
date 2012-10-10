@@ -149,16 +149,16 @@ jQuery(document).ready(function() {
     /*
      * Bind functions to the table controls dom elements.
      */
-    jQuery('.controls .control.firstPage').click(function() {
+    jQuery('.controls .control.firstPage').on('click', function() {
         activeTable.firstPage();
     });
-    jQuery('.controls .control.previousPage').click(function() {
+    jQuery('.controls .control.previousPage').on('click', function() {
         activeTable.previousPage();
     });
-    jQuery('.controls .control.nextPage').click(function() {
+    jQuery('.controls .control.nextPage').on('click', function() {
         activeTable.nextPage();
     });
-    jQuery('.controls .control.lastPage').click(function() {
+    jQuery('.controls .control.lastPage').on('click', function() {
         activeTable.lastPage();
     });
     jQuery('.controls .pageSize select').change(function() {
@@ -171,18 +171,39 @@ jQuery(document).ready(function() {
             activeTable.gotoPage($(this).val());
         }
     });
-    jQuery('.controls .control.refresh').click(function() {
+    jQuery('.controls .control.refresh').on('click', function() {
         activeTable.refresh();
     });
     
-    jQuery('#submissionsNavigation').on('click', '.nav', function(event) {
-        event.preventDefault();
-        activeTable = tables[jQuery(this).data('group-name')];
-        jQuery('#searchResults').hide();
-        jQuery('#searchActive').hide();
+    jQuery('#submissionsTab').on('click', function() {
+        jQuery('#submissionsTable').hide();
         jQuery('.tableContainer').hide();
-        jQuery('#submissionsTable').fadeIn();
-        jQuery(activeTable.container).fadeIn();
+        activeTable = tables[jQuery('#submissionsNavigation .nav:first-child').data('group-name')];
         activeTable.refresh();
+        jQuery(activeTable.container).show();
+        jQuery('#submissionsTable').fadeIn();
+        // Highlight selected submission
+        activeNavigation('.nav', jQuery('#submissionsNavigation .nav:first-child'), 'active');
     });
+    
+    jQuery('#submissionsNavigation').on('click', '.nav', function() {
+        jQuery('#submissionsTable').hide();
+        jQuery('.tableContainer').hide();
+        activeTable = tables[jQuery(this).data('group-name')];
+        activeTable.refresh();
+        jQuery(activeTable.container).show();
+        jQuery('#submissionsTable').fadeIn();      
+        // Highlight selected submission
+        activeNavigation('.nav', this, 'active');
+    });
+    
+    /**
+     * @param navSelector string
+     * @param activeSelector string
+     * @param activeClass string
+     */
+    function activeNavigation(navSelector, activeSelector, activeClass) {
+        jQuery(navSelector).removeClass(activeClass);
+        jQuery(activeSelector).addClass(activeClass);
+    }
 });

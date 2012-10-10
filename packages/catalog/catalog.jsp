@@ -68,7 +68,7 @@
                     <li><a href="#catalogContainer">Catalog</a></li>
                     <li><a href="#services">Services A - Z</a></li>
                     <li><a href="#searchServices">Search Services</a></li>
-                    <li><a href="#submissionsTable">Submissions</a></li>
+                    <li><a id="submissionsTab" href="#submissionsTable">Submissions</a></li>
                 </ul>
                 <%-- CATALOG VIEW --%>
                 <div id="catalogContainer" class="hidden clearfix">
