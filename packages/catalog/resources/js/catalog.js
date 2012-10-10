@@ -5,7 +5,10 @@ jQuery(document).ready(function() {
     var nestedPreview = '#nestedNavigationPreview';
 
     // Some Default states for dom elements
-    jQuery('#tabs').tabs();   
+    jQuery('#tabs').tabs();
+    setTimeout(function() {
+        jQuery('#tabs').fadeIn();
+    }, 1);
     jQuery('body').on('click', 'a', function() {
         jQuery('html, body').animate({ scrollTop: 0 }, 0);
     });

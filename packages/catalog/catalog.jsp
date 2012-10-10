@@ -63,7 +63,7 @@
                     Department: IT
                 </div>   
             </div>
-            <div id="tabs">
+            <div id="tabs" class="hidden">
                 <ul>
                     <li><a href="#catalogContainer">Catalog</a></li>
                     <li><a href="#ServicesAZ">Services A - Z</a></li>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <%-- SUBMISSIONS VIEW --%>
-                <div id="submissionsTable" class="hidden clearfix">
+                <div id="submissionsTable" class="clearfix">
                     <%-- SUBMISSION TABLE LINKS --%>
                     <div id="submissionsNavigation">
                         <% if (context != null) { %>
@@ -165,12 +165,14 @@
                         <% }%>
                     </div>
                     <div class="clearfix"></div>
-                    <%@include file="interface/fragments/tableControls.jspf"%>
-                    <div class="tableContainer hidden" id="tableContainerRequestsOpen"></div>
-                    <div class="tableContainer hidden" id="tableContainerRequestsClosed"></div>
-                    <div class="tableContainer hidden" id="tableContainerRequestsParked"></div>
-                    <div class="tableContainer hidden" id="tableContainerApprovalsPending"></div>
-                    <div class="tableContainer hidden" id="tableContainerApprovalsCompleted"></div>
+                    <div id="submissionDisplayControl" class="hidden">
+                        <%@include file="interface/fragments/tableControls.jspf"%>
+                        <div class="tableContainer hidden" id="tableContainerRequestsOpen"></div>
+                        <div class="tableContainer hidden" id="tableContainerRequestsClosed"></div>
+                        <div class="tableContainer hidden" id="tableContainerRequestsParked"></div>
+                        <div class="tableContainer hidden" id="tableContainerApprovalsPending"></div>
+                        <div class="tableContainer hidden" id="tableContainerApprovalsCompleted"></div>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"></div>

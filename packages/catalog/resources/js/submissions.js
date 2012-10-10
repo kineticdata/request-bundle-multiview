@@ -175,24 +175,26 @@ jQuery(document).ready(function() {
         activeTable.refresh();
     });
     
+    var submissionDisplayControl = '#submissionDisplayControl';
+    
     jQuery('#submissionsTab').on('click', function() {
-        jQuery('#submissionsTable').hide();
+        jQuery(submissionDisplayControl).hide();
         jQuery('.tableContainer').hide();
         activeTable = tables[jQuery('#submissionsNavigation .nav:first-child').data('group-name')];
         activeTable.refresh();
         jQuery(activeTable.container).show();
-        jQuery('#submissionsTable').fadeIn();
+        jQuery(submissionDisplayControl).fadeIn();
         // Highlight selected submission
         activeNavigation('.nav', jQuery('#submissionsNavigation .nav:first-child'), 'boxActive');
     });
     
     jQuery('#submissionsNavigation').on('click', '.nav', function() {
-        jQuery('#submissionsTable').hide();
+        jQuery(submissionDisplayControl).hide();
         jQuery('.tableContainer').hide();
         activeTable = tables[jQuery(this).data('group-name')];
         activeTable.refresh();
         jQuery(activeTable.container).show();
-        jQuery('#submissionsTable').fadeIn();      
+        jQuery(submissionDisplayControl).fadeIn();      
         // Highlight selected submission
         activeNavigation('.nav', this, 'boxActive');
     });
