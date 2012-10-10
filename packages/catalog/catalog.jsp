@@ -27,7 +27,6 @@
         <link rel="stylesheet" href="<%= bundle.packagePath()%>resources/css/catalogSearch.css" type="text/css" />
         <link rel="stylesheet" href="<%= bundle.packagePath()%>resources/css/submissions.css" type="text/css" />
         <!-- Page Javascript -->
-        <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/jquery.form.js"></script>
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/catalogSearch.js"></script>
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/catalog.js"></script>
         <script type="text/javascript" src="<%=bundle.bundlePath()%>common/resources/js/arsTable.js"></script>
