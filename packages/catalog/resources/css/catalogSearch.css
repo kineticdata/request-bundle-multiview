@@ -7,13 +7,14 @@
     display: none;
     float: left;
     margin: 10px;
-    width: 760px;
+    width: 824px;
 }
 
 #searchResults .message {
-    font-size: 15px;
-    line-height: 150px;
-    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 40px;
 }
 
 #searchResults .highlighted {
@@ -74,7 +75,7 @@
     line-height: 150px;
     margin: 0px 0px 0px 10px;
     float: left;
-    width: 770px;
+    width: 834px;
     text-align: center;
 }
 

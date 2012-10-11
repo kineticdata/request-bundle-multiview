@@ -27,7 +27,6 @@
         <link rel="stylesheet" href="<%= bundle.packagePath()%>resources/css/login.css" type="text/css" />
         <!-- Page Javascript -->       
         <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/login.js"></script>
-        <script type="text/javascript" src="<%=bundle.packagePath()%>resources/js/jquery.alert.js"></script>
     </head>
     <body>
         <%@include file="../../common/interface/fragments/contentHeader.jspf"%>       
@@ -54,7 +53,7 @@
                 </div>
                 <% }%>
                 <!-- Login Form -->
-                <form name="Login" method="post" action="KSAuthenticationServlet">
+                <form id="loginForm" name="Login" method="post" action="KSAuthenticationServlet">
                     <!-- User Name -->
                     <p>
                         <label class="infield" for="UserName">Username</label>

@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
                 jQuery('body').css({'padding-top':'95px'});
                 jQuery('.contentHeader').css({'position':'fixed', 'top':0, 'left':0, 'right':0, 'z-index':9000});
                 jQuery('#catalogBreadCrumbs').css({'position':'fixed', 'top':'71px', 'z-index': 9000});
-                jQuery('#sideNav').css({'position':'fixed', 'margin-left':'780px', 'margin-top':'10px', 'z-index':9000});
+                jQuery('#sideNav').css({'position':'fixed', 'margin-left':'844px', 'margin-top':'10px', 'z-index':9000});
                 jQuery(preview).css({'margin':'22px 0px 0px 271px'});
             } else {
                 jQuery('body').css({'padding-top':'0px'});
