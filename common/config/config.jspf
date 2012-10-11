@@ -2,8 +2,6 @@
     TODO: Document PACKAGE/common/config/config.jspf
 
     NOTE: This file is required.
-<<<<<<< HEAD
-    MDA - 3 Level Display
 --%>
 <%
     bundle.setProperty("companyName", "");
@@ -11,15 +9,6 @@
 
     bundle.setProperty("homeUrl", bundle.applicationPath() + "DisplayPage?name=MDACatalog");
     bundle.setProperty("loginUrl", bundle.applicationPath() + "DisplayPage?name=MDALogin");
-=======
---%>
-<%
-    bundle.setProperty("companyName", "Air");
-    bundle.setProperty("catalogName", "Air");
-
-    bundle.setProperty("homeUrl", bundle.applicationPath() + "DisplayPage?name=AirCatalog");
-    bundle.setProperty("loginUrl", bundle.applicationPath() + "DisplayPage?name=AirLogin");
->>>>>>> upstream/master
     bundle.setProperty("logoutUrl", "KSAuthenticationServlet?Logout=true");
 
     java.util.Map<String,String> submissionGroups = new java.util.LinkedHashMap();
