@@ -50,11 +50,11 @@
             <div id="searchResults">
             </div>
             <div id="catalogContainer">
-                <div id="nestedNav">
+                <div id="nestedNav" class="borderRight">
                     <%-- TEMPLATES VIEW --%>
                     <div id="templatesNav">
                     </div>
-                    <div id="categoriesNavHeader" class="hidden"></div>
+                    <div id="categoriesNavHeader" class="borderTop hidden"></div>
                     <%-- CATAGORIES VIEW --%>
                     <div id="categoriesNav">
                         <% for (Category category : catalog.getRootCategories(context)) { %>

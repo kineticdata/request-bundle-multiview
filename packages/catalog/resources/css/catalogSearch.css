@@ -30,32 +30,28 @@
 }
 
 #searchResults .templates {
-    margin-top: 12px;
 }
 
 #searchResults .templates .template {
-    border: 1px solid;
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 10px;
     padding: 5px;
 }
 
 #searchResults .templates .template .attribute {
-    border-top: 1px solid;
     margin-bottom: 5px;
     padding-top: 5px;
 }
 
 #searchResults .templates .template .attributeName {
-    float: left;
     width: 100px;
+    padding: 0px 5px
 }
 
-#searchResults .templates .template .attributeValues {
-    margin-left: 110px;
+#searchResults .templates .template .attributeValues {   
+    padding: 0px 5px 0px 5px;
 }
 
 #searchResults .templates .template .attributeValues .attributeValue {
-    border-right: 2px solid;
     float: left;
     margin-right: 10px;
     padding-right: 10px;
@@ -63,6 +59,7 @@
 
 #searchResults .templates .template .templateDescription {
     margin-bottom: 5px;
+    padding: 0px 5px 0px 5px;
 }
 
 #searchResults .templates .template .templateName {
@@ -75,7 +72,6 @@
     line-height: 150px;
     margin: 0px 0px 0px 10px;
     float: left;
-    width: 834px;
     text-align: center;
 }
 
