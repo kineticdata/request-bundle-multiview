@@ -25,15 +25,28 @@ jQuery(document).ready(function() {
      * Action functions for catalog search
      */
     function before(jqXHR, settings) {
-        jQuery.blockUI({ message: '<h1>Loading...</h1>' });
+        jQuery.blockUI({ 
+            message: '<h1>Loading...</h1>',
+            showOverlay: true, 
+            centerY: true,
+            centerX: true,
+            css: {
+                width: '300px',
+                border: 'none', 
+                padding: '5px', 
+                backgroundColor: '#000', 
+                '-webkit-border-radius': '10px', 
+                '-moz-border-radius': '10px', 
+                opacity: .6, 
+                color: '#fff' 
+            }
+        });
         jQuery('#searchResults').hide();
-        jQuery('#searchSpinner').show();
         
     }
 
     function success(data) {
         if(data) {
-            jQuery('#searchSpinner').hide();
             jQuery('#searchResults').html(data).show();
             jQuery.unblockUI();
             // Retrieve the search value from the search input
@@ -45,7 +58,6 @@ jQuery(document).ready(function() {
     function error(jqXHR, textStatus, errorThrown) {
         // Clear alert
         jQuery.unblockUI();
-        jQuery('#searchSpinner').hide();
         jQuery('#searchResults').html('<div class="message alert alert-danger"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
     }
 });
