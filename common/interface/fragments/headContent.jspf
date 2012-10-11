@@ -62,3 +62,4 @@
 <script type="text/javascript" src="<%=bundle.bundlePath()%>common/resources/js/jquery.blockUI.js"></script>
 <script type="text/javascript" src="<%=bundle.bundlePath()%>common/resources/js/ajaxLogin.js"></script>
 <script type="text/javascript" src="<%=bundle.bundlePath()%>common/resources/js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript" src="<%=bundle.bundlePath()%>common/resources/js/jquery.alert.js"></script>

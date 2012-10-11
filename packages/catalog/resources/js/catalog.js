@@ -193,12 +193,19 @@ jQuery(document).ready(function() {
                 .setFailAction(failActionTemplate)
                 .checkExistance();
     }
-
+    
+    /**
+     * @param ulSelector string
+     * @param includeAll boolean
+     */
     function initializeAlphabeticalNav(ulSelector, includeAll) {
         jQuery(ulSelector).listnav({
             includeAll: includeAll,
-            noMatchText: 'There are no matching entries.',
-            showCounts: false
+            noMatchText: '<div id="listNavCustomError" class="message alert alert-danger"><a class="close" data-dismiss="alert">x</a> There are no matching entries.</div>',
+            showCounts: false,
+            onClick: function(letter) {
+                jQuery('#listNavCustomError').show();
+            }
         });
     }
 });

@@ -118,7 +118,7 @@
                     <% for(Template template : catalog.getTemplates(context)) { %>
                         <% if (template.hasCategories()) {%>
                         <li class="template border gradient">
-                            <div class="name">
+                            <div class="name header">
                                 <%= template.getName()%>
                             </div>
                             <div class="description">

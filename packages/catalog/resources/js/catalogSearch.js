@@ -43,8 +43,9 @@ jQuery(document).ready(function() {
     }
 
     function error(jqXHR, textStatus, errorThrown) {
+        // Clear alert
         jQuery.unblockUI();
         jQuery('#searchSpinner').hide();
-        jQuery('#searchResults').html('<div class="message">There was an error. Try again.</div>').show();
+        jQuery('#searchResults').html('<div class="message alert alert-danger"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
     }
 });

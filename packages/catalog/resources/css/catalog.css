@@ -13,7 +13,7 @@
  */
 #tabs {
     float: left;
-    width: 800px;
+    width: 790px;
 }
  
 /**
@@ -58,7 +58,7 @@
 }
 
 #nestedNavigationPreview {
-    width: 500px;
+    width: 490px;
     margin: 10px 10px 10px 10px;
     padding: 5px;
     float: left;
@@ -110,7 +110,7 @@
    float: left;
    width: 180px;
    min-height: 1px;
-   margin: 0px 5px 0px 5px;
+   margin: 0px 10px 0px 10px;
 }
 
 /**
@@ -213,9 +213,16 @@
 }
 
 #ServicesAZ .ln-no-match {
-    text-align: center;
-    color: red;
-    font-size: 14px;
+    float: left;
+    margin: 0px 0px -10px 30px;
+}
+
+#ServicesAZ #templatesAlphabetical .description {
+    padding: 0px 5px 0px 5px;
+}
+
+#ServicesAZ #templatesAlphabetical .name {
+    margin-bottom: 5px; 
 }
 
 /**
