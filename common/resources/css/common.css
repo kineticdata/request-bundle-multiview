@@ -103,6 +103,14 @@ table.kd-table tr:hover a { color: #006699; }
 .borderTop { border-top-style: solid; border-top-width: 1px; border-top-color: #AAAAAA; }
 .borderBottom { border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #AAAAAA; }
 
+/* Borders */
+.rounded {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
 /* Alerts */
 .alert-danger, .alert-error {
     background-color: #F2DEDE;
