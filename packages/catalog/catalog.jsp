@@ -139,10 +139,6 @@
                            <input type="submit" id="searchButton" value="" />
                         </p>
                     </form>
-                    <div id="searchSpinner">
-                        Searching for "<span class="searchValue"></span>"
-                        <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
-                    </div>
                     <%-- SEARCH RESULTS VIEW --%>
                     <div id="searchResults">
                     </div>
