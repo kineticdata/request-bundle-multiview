@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     // Click event for search
-    jQuery('#catalogSearchForm').submit(function(event) {
+    jQuery('#catalogSearchForm').on('submit', function(event) {
         // Prevent default action.
         event.preventDefault();
         // Execute the ajax request.
@@ -62,6 +62,6 @@ jQuery(document).ready(function() {
 
     function error() {
         jQuery.unblockUI();
-        jQuery('#searchResults').html('<div class="message alert alert-danger"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
+        jQuery('#searchResults').html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
     }
 });
