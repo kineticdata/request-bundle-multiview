@@ -177,19 +177,21 @@ jQuery(document).ready(function() {
     
     jQuery('#sideNav').on('click', '.nav', function(event) {
         event.preventDefault();
+        blockUICustom('<h1>Loading...</h1>', '300px');
         activeTable = tables[jQuery(this).data('group-name')];
         jQuery('#catalogSearchForm').hide();
         jQuery('#catalogContainer').hide();
         jQuery('#searchResults').hide();
         jQuery('#searchActive').hide();
         jQuery('.tableContainer').hide();
-        jQuery('#submissionsTable').fadeIn();
-        jQuery(activeTable.container).fadeIn();
+        jQuery('#submissionsTable').show();
+        jQuery(activeTable.container).show();
         jQuery('#breadCrumbSubmissions').find('.breadCrumb').text(jQuery(this).data('group-name'));
         jQuery('#breadCrumbRoot').nextAll().remove();
         jQuery('.breadCrumbArrow').remove();
         jQuery('#breadCrumbRoot').append('<span class="breadCrumbArrow">></span>');
         jQuery('#catalogBreadCrumbs').append(jQuery('#breadCrumbSubmissions').html());
         activeTable.refresh();
+        jQuery.unblockUI();
     });
 });

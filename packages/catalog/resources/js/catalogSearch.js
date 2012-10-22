@@ -25,22 +25,7 @@ jQuery(document).ready(function() {
      * Action functions for catalog search
      */
     function before() {
-        jQuery.blockUI({ 
-            message: '<h1>Loading...</h1>',
-            showOverlay: true, 
-            centerY: true,
-            centerX: true,
-            css: {
-                width: '300px',
-                border: 'none', 
-                padding: '5px', 
-                backgroundColor: '#000', 
-                '-webkit-border-radius': '10px', 
-                '-moz-border-radius': '10px', 
-                opacity: .6, 
-                color: '#fff' 
-            }
-        });
+        blockUICustom('<h1>Loading...</h1>', '300px');
         // Retrieve the search value from the search input
         var searchValue = jQuery('#searchInput').val();
         jQuery('.searchValue').text(searchValue);
@@ -61,7 +46,7 @@ jQuery(document).ready(function() {
     }
 
     function error() {
-        jQuery.unblockUI();
         jQuery('#searchResults').html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
+        jQuery.unblockUI();
     }
 });
