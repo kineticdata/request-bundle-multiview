@@ -42,7 +42,7 @@ function Ajax() {
 
     /**
      * @param selector
-     * @return FormInitializer
+     * @return Ajax
      */
     this.setAjaxSelector = function(selector) {
         ajaxSelector = selector;
@@ -51,7 +51,7 @@ function Ajax() {
 
     /**
      * @param object
-     * @return FormInitializer
+     * @return Ajax
      */
     this.setOptions = function(ajaxOptions) {
         options = ajaxOptions;
@@ -59,7 +59,7 @@ function Ajax() {
     }
 
     /**
-     * @return FormInitializer
+     * @return Ajax
      */
     this.makeRequest = function() {
         if(ajaxSelector == null) {
