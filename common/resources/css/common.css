@@ -254,9 +254,25 @@ table.kd-table tr:hover a { color: #006699; }
 }
 
 .contentHeader .userInfo {
-    float: right;
-    margin: 20px 10px 0px 0px;
+    background-color: #006698;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
 }
+
+.contentHeader .userInfo a:link,
+.contentHeader .userInfo a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.contentHeader .userInfo:hover,
+.contentHeader .userInfo:focus,
+.contentHeader .userInfo:active {
+    cursor: pointer;
+}
+
 
 /**
  * Footer
