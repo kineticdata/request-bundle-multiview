@@ -46,7 +46,7 @@
                 </div>
                 <!-- Error Message -->
                 <% if (!("".equals(customerRequest.getErrorMessage()) || customerRequest.getErrorMessage() == null)) { %>   
-                    <div class="alert alert-danger">
+                    <div class="message alert alert-error">
                         <a class="close" data-dismiss="alert">x</a>
                             <%= customerRequest.getErrorMessage() %>
                             <% customerRequest.clearErrorMessage(); %>
