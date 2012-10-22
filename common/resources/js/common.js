@@ -25,6 +25,19 @@ function blockUICustom(loadingMsg, width) {
 }
 
 /**
+ * @param obj object
+ * IE ONLY - used with the styles "preRequiredLabel
+ * Example: *.preRequiredLabel { zoom: expression(setIE7PreRequired(this)); }
+ */
+setIE7PreRequired = function(obj) {
+    if(jQuery(obj).hasClass('preRequiredLabel')) {
+        if(obj.innerHTML.indexOf("*")==-1) {
+            jQuery(obj).prepend("*");
+        }
+    }
+}
+
+/**
  * Ajax Class
  */
 function Ajax() {

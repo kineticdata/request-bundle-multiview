@@ -106,6 +106,8 @@ textarea {
     content: "* ";
 }
 
+*.preRequiredLabel { zoom: expression(setIE7PreRequired(this)); }
+
 /*
  * Styles for the table panel displayed for set fields external events
 */
