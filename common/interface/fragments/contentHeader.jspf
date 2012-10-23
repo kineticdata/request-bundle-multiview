@@ -6,8 +6,8 @@
             <img alt="<%= bundle.getProperty("companyName") %>" class="logoHeader" src="<%= bundle.bundlePath()%>common/resources/images/logo.png" />
         </a>
         <% if (context != null) {%>
-        <div class="userInfo" style="float: left; margin: 0px 0px 0px 80px;">
-            Welcome <a href="javascript:void(0)"><%= context.getUserName()%></a>
+        <div class="userInfo" style="float: left; margin: 0px 0px 0px 80px; cursor: default;">
+            Welcome <%= context.getUserName()%>
         </div>
         <div class="userInfo" style="float: right; margin: 0px 10px 0px 0px;">
             <a href="<%= bundle.getProperty("logoutUrl")%>">logout</a>
