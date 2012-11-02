@@ -68,6 +68,8 @@ table.kd-table tr { background: #E3F0E3; }
 table.kd-table tr.kd-odd { background: #FFFFFF; }
 table.kd-table tr:hover { background: #99CC99; color: black; }
 table.kd-table tr:hover a { color: #006699; }
+table.kd-table tr.kd-even td.kd-cell-sorting-descending,
+table.kd-table tr.kd-even td.kd-cell-sorting-ascending { background: #99CC99; }
 
 /* Submission controls */
 .button { background-color: #C6C6C6; border-color: #A1A1A1; }

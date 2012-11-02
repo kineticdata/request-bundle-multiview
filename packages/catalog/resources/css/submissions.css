@@ -48,6 +48,30 @@ table.kd-table th {
     cursor: pointer;
 }
 
+table.kd-table .kd-header-sorting-descending {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: -64px -16px;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+table.kd-table .kd-header-sorting-ascending {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: 0 -16px;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+table.kd-table .kd-header-sorting {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: -128px 0;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
 /**
  * Controls
  */

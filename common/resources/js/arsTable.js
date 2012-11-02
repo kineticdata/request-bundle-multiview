@@ -130,7 +130,7 @@ Table.prototype.refresh = function() {
     var date = new Date();
     var timestamp = date.getTime();
     
-    var url = BUNDLE.bundlePath + '/common/interface/callbacks/arsTable.json.jsp' +
+    var url = BUNDLE.bundlePath + 'common/interface/callbacks/arsTable.json.jsp' +
     '?form=' + this.form +
     '&qualification=' + this.qualification +
     '&fieldIds=' + fieldIds +
@@ -162,6 +162,11 @@ Table.prototype.redraw = function() {
             var header = jQuery('<th></th>');
             header.addClass('kd-header');
             header.text(field);
+            if(this.sortField == field) {
+                header.append('<span class="kd-header-sorting-'+this.sortOrder+'"></span>');
+            } else {
+                header.append('<span class="kd-header-sorting"></span>');
+            }
             header.hover(function() {
                 jQuery(this).addClass('kd-highlight');
             }, function() {
@@ -192,6 +197,9 @@ Table.prototype.redraw = function() {
             if ( this.fields.hasOwnProperty(field) ) {
                 var cell = jQuery('<td></td>');
                 cell.addClass('kd-cell');
+                if(this.sortField == field) {
+                    cell.addClass('kd-cell-sorting-'+this.sortOrder);
+                }
                 cell.hover(function() {
                     jQuery(this).addClass('kd-highlight');
                 }, function() {
