@@ -174,7 +174,7 @@ jQuery(document).ready(function() {
     jQuery('.controls .control.refresh').on('click', function() {
         activeTable.refresh();
     });
-    
+
     var submissionDisplayControl = '#submissionDisplayControl';
     
     jQuery('#submissionsTab').on('click', function() {

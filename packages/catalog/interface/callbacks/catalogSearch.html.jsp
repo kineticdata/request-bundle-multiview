@@ -31,9 +31,9 @@
 
     // Display an error message if there are 0 querySegments or > 10 querySegments
     if (querySegments.length == 0 || querySegments[0].length() == 0) {
-        out.println("<div class=\"message alert alert-danger\"><a class=\"close\" data-dismiss=\"alert\">x</a> Please enter a search term.</div>");
+        out.println("<div class=\"message alert alert-error\"><a class=\"close\" data-dismiss=\"alert\">x</a> Please enter a search term.</div>");
     } else if (querySegments.length > 10) {
-        out.println("<div class=\"message alert alert-danger\"><a class=\"close\" data-dismiss=\"alert\">x</a> Search is limited to 10 search terms.</div>");
+        out.println("<div class=\"message alert alert-error\"><a class=\"close\" data-dismiss=\"alert\">x</a> Search is limited to 10 search terms.</div>");
     } else {
         // Retrieve the searchableAttribute property
         String searchableAttributeString = bundle.getProperty("searchableAttributes");
@@ -50,7 +50,7 @@
         Template[] matchingTemplates = catalogSearch.getMatchingTemplates(searchableAttributes);
         Pattern combinedPattern = catalogSearch.getCombinedPattern();
         if (matchingTemplates.length == 0) {
-            out.println("<div class=\"message alert alert-danger\"><a class=\"close\" data-dismiss=\"alert\">x</a>No results were found.</div>");
+            out.println("<div class=\"message alert alert-error\"><a class=\"close\" data-dismiss=\"alert\">x</a>No results were found.</div>");
         } else {
 %>
 <div id="searchFor" class="header clearfix" style="margin: 0px 10px 10px 10px;">

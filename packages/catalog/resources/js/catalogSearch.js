@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     // Click event for search
-    jQuery('#catalogSearchForm').submit(function(event) {
+    jQuery('#catalogSearchForm').on('submit', function(event) {
         // Prevent default action.
         event.preventDefault();
         // Execute the ajax request.
@@ -24,25 +24,14 @@ jQuery(document).ready(function() {
     /**
      * Action functions for catalog search
      */
-    function before(jqXHR, settings) {
-        jQuery.blockUI({ 
-            message: '<h1>Loading...</h1>',
-            showOverlay: true, 
-            centerY: true,
-            centerX: true,
-            css: {
-                width: '300px',
-                border: 'none', 
-                padding: '5px', 
-                backgroundColor: '#000', 
-                '-webkit-border-radius': '10px', 
-                '-moz-border-radius': '10px', 
-                opacity: .6, 
-                color: '#fff' 
-            }
-        });
-        jQuery('#searchResults').hide();
-        
+    function before() {
+        blockUICustom('<h1>Loading...</h1>', '300px');
+        // Retrieve the search value from the search input
+        var searchValue = jQuery('#searchInput').val();
+        jQuery('.searchValue').text(searchValue);
+        jQuery('#catalogContainer').hide();
+        jQuery('#submissionsTable').hide();
+        jQuery('#searchResults').hide();        
     }
 
     function success(data) {
@@ -55,9 +44,8 @@ jQuery(document).ready(function() {
         }
     }
 
-    function error(jqXHR, textStatus, errorThrown) {
-        // Clear alert
+    function error() {
+        jQuery('#searchResults').html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
         jQuery.unblockUI();
-        jQuery('#searchResults').html('<div class="message alert alert-danger"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
     }
 });

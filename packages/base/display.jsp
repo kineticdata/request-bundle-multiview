@@ -27,7 +27,7 @@
     </head>
 
     <body>
-        <%@include file="../../common/interface/fragments/contentHeader.jspf"%>
+        <%@include file="../../core/interface/fragments/contentHeader.jspf"%>
             <div class="container">
                 <%@include file="../../core/interface/fragments/displayBodyContent.jspf"%>
                 <div class="clearfix"></div>

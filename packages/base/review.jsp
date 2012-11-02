@@ -12,7 +12,6 @@
 <html>
     <head>
         <title><%= customerRequest.getTemplateName()%></title>
-
         <%-- Include the application head content. --%>
         <%@include file="../../core/interface/fragments/applicationHeadContent.jspf" %>
         <%@include file="../../core/interface/fragments/reviewHeadContent.jspf"%>
@@ -31,7 +30,7 @@
     </head>
 
     <body class="loadAllPages_<%=customerSurveyReview.getLoadAllPages()%> review">
-        <%@include file="../../common/interface/fragments/contentHeader.jspf"%>
+        <%@include file="../../core/interface/fragments/contentHeader.jspf"%>
         <div class="container">
             <div id="contentBody">
                 <div id="reviewBorder">

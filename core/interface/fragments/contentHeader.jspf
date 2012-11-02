@@ -6,13 +6,18 @@
             <img alt="<%= bundle.getProperty("companyName") %>" class="logoHeader" src="<%= bundle.bundlePath()%>common/resources/images/logo.png" />
         </a>
         <% if (context != null) {%>
-        <div class="userInfo" style="float: left; margin: 0px 0px 0px 80px; cursor: default;">
-            Welcome <%= context.getUserName()%>
+        <div class="userInfo" style="float: left; margin: 0px 0px 0px 80px;">
+            <a class="navItem" href="<%=bundle.getProperty("homeUrl")%>">Return to Catalog</a>
         </div>
         <div class="userInfo" style="float: right; margin: 0px 10px 0px 0px;">
             <a href="<%= bundle.getProperty("logoutUrl")%>">logout</a>
         </div>
         <% } %>
+         <% if (customerRequest.getKsr() != null) {%>
+        <div class="userInfo" style="float: left; margin: 0px 0px 0px 80px;">
+           <%= customerRequest.getKsr() %>
+        </div>
+        <% }%>
         <div class="clearfix"></div>
     </div>
 </header>
