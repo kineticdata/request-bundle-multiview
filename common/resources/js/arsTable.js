@@ -164,6 +164,7 @@ Table.prototype.redraw = function() {
             header.text(field);
             if(this.sortField == field) {
                 header.append('<span class="kd-header-sorting-'+this.sortOrder+'"></span>');
+                header.addClass('kd-header-sorting-selected');
             } else {
                 header.append('<span class="kd-header-sorting"></span>');
             }
