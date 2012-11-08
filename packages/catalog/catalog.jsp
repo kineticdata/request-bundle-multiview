@@ -42,9 +42,11 @@
                     Catalog
                 </div>
             </div>
-            <div id="searchSpinner">
-                Searching for "<span class="searchValue"></span>"
-                <img alt="loading..." src="<%= bundle.bundlePath%>common/resources/images/spinner_00427E_FFFFFF.gif" />
+            <!-- Search Loader -->
+            <div id="loader" class="hidden" style="text-align: center;">
+                <img style="margin: 10px 0px 10px 0px; height: 28px; width: 28px;" alt="Please Wait." src="<%=bundle.bundlePath()%>common/resources/images/spinner.gif" />
+                <br />
+                Loading Results
             </div>
             <%-- SEARCH RESULTS VIEW --%>
             <div id="searchResults">
@@ -85,7 +87,7 @@
             </div>
             <%-- SIDEBAR VIEW --%>
             <div id="sideNav">
-                <form id="catalogSearchForm" method="get" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
+                <form id="catalogSearchForm" class="borderLeft borderTop borderBottom gradient" method="get" action="<%= bundle.packagePath() %>interface/callbacks/catalogSearch.html.jsp">
                     <input type="hidden" name="catalogName" value="<%= bundle.getProperty("catalogName") %>" />
                     <p>
                        <label class="infield" for="searchInput">Search Catalog</label>

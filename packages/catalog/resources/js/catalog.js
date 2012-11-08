@@ -262,7 +262,6 @@ jQuery(document).ready(function() {
        jQuery('.template').removeClass('textGreen');
        jQuery('.category').removeClass('textGreen');
        jQuery(element).addClass('textGreen');
-       jQuery(preview).empty();
        var currentCategoryDescription = jQuery(element).find('.description').html();
        jQuery(preview).html(currentCategoryDescription);
    }
