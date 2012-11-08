@@ -1,3 +1,7 @@
+/**
+ * @param email string
+ * @param displaySelector string
+ */
 function gravatar(email, displaySelector) {
     var lowercaseEmail = email.toLocaleLowerCase();
     var md5 = $.md5(lowercaseEmail);
