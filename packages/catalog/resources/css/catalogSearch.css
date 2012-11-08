@@ -6,8 +6,8 @@
 #searchResults {
     display: none;
     float: left;
-    margin: 10px;
-    width: 824px;
+    min-width: 844px;
+    max-width: 844px;
 }
 
 #searchResults .message {
