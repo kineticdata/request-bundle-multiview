@@ -248,17 +248,15 @@
 /**
  * Form controls for Submissions
  */
-.controls input {
-    margin: 0;
-    padding: 0;
-}
 .controls select {
     margin: 0;
     padding: 0;
+    height: 20px;
 }
 
 .controls input[type='text'] {
     margin-bottom: 0;
+    height: 11px;
 }
 
 /**
