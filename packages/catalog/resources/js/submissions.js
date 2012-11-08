@@ -2,7 +2,10 @@
  * On document ready we will load the tables present on the page and bind events
  * that handle the navigation tabs as well as the table controls.
  */
-jQuery(document).ready(function() {
+$(document).ready(function() {
+    var loader = '#loader';
+    var submissions = '#submissionsTable';
+    var activeTable = null;
     /*
      * Define the common table options that all of the tables on this page will
      * share.  Here we define the form the tables represent, the fields present,
@@ -30,13 +33,15 @@ jQuery(document).ready(function() {
         // the refreshTableControls function defined below.
         tableCallback: function(table, element) {
             refreshTableControls();
+            $(loader).hide();
+            $('#submissionsTable').show();
         },
         // This callback function binds a click event to each of the header
         // cells that when clicked it either sorts the table by that field or
         // toggles the sort order depending on if it was already sorting by that
         // field.
         headerCallback: function(table, element, label) {
-            jQuery(element).click(function() {
+            $(element).click(function() {
                 if ( label != table.sortField ) {
                     table.sortBy(label);
                 } else {
@@ -53,14 +58,14 @@ jQuery(document).ready(function() {
      */
     function requestsOpenClosedCellCallback(table, element, rowData, rowIndex, cellData, cellIndex) {
         if ( cellIndex == table.getIndex('Request Id') ) {
-            jQuery(element).empty();
-            var anchor = jQuery('<a href="javascript:void(0)">' + cellData + '</a>');
+            $(element).empty();
+            var anchor = $('<a href="javascript:void(0)">' + cellData + '</a>');
             anchor.click(function() {
                 BUNDLE.ajax({
                     url: BUNDLE.packagePath + 'interface/callbacks/submissionDetails.html.jsp?csrv=' + rowData[table.getIndex('Instance Id')],
                     success: function(data) {
-                        var element = jQuery(data);
-                        jQuery('#dialogContainer').append(element);
+                        var element = $(data);
+                        $('#dialogContainer').append(element);
                         element.dialog({
                             closeText: 'close',
                             width: 500
@@ -69,7 +74,7 @@ jQuery(document).ready(function() {
                     }
                 });
             });
-            jQuery(element).append(anchor);
+            $(element).append(anchor);
         }
     }
     
@@ -80,7 +85,7 @@ jQuery(document).ready(function() {
     function requestsParkedCellCallback(table, element, rowData, rowIndex, cellData, cellIndex) {
         if (cellIndex == table.getIndex('Request Id')) {
             var anchor = '<a href="/kinetic/DisplayPage?csrv=' + rowData[table.getIndex('Instance Id')] + '&return=yes">' + cellData + '</a>';
-            jQuery(element).html(anchor);
+            $(element).html(anchor);
         }
     }
     
@@ -91,7 +96,7 @@ jQuery(document).ready(function() {
     function approvalsPendingCellCallback(table, element, rowData, rowIndex, cellData, cellIndex) {
         if (cellIndex == table.getIndex('Request Id')) {
             var anchor = '<a href="/kinetic/DisplayPage?csrv=' + rowData[table.getIndex('Instance Id')] + '">' + cellData + '</a>';
-            jQuery(element).html(anchor);
+            $(element).html(anchor);
         }
     }
     
@@ -100,98 +105,99 @@ jQuery(document).ready(function() {
      * name to each table.
      */    
     var tables = {
-        "Requests Open": new Table(jQuery.extend(tableOptions, {
+        "Requests Open": new Table($.extend(tableOptions, {
             container: '#tableContainerRequestsOpen',
             qualification: 'Requests Open',
             cellCallback: requestsOpenClosedCellCallback,
             initialize: false
         })),
-        "Requests Closed": new Table(jQuery.extend(tableOptions, {
+        "Requests Closed": new Table($.extend(tableOptions, {
             container: '#tableContainerRequestsClosed',
             qualification: 'Requests Closed',
             cellCallback: requestsOpenClosedCellCallback,
             initialize: false
         })),
-        "Requests Parked": new Table(jQuery.extend(tableOptions, {
+        "Requests Parked": new Table($.extend(tableOptions, {
             container: '#tableContainerRequestsParked',
             qualification: 'Requests Parked',
             cellCallback: requestsParkedCellCallback,
             initialize: false
         })),
-        "Approvals Pending": new Table(jQuery.extend(tableOptions, {
+        "Approvals Pending": new Table($.extend(tableOptions, {
             container: '#tableContainerApprovalsPending',
             qualification: 'Approvals Pending',
             cellCallback: approvalsPendingCellCallback,
             initialize: false
         })),
-        "Approvals Completed": new Table(jQuery.extend(tableOptions, {
+        "Approvals Completed": new Table($.extend(tableOptions, {
             container: '#tableContainerApprovalsCompleted',
             qualification: 'Approvals Completed',
             initialize: false
         }))
     }
-    
-    var activeTable = null;
    
     /*
      * Create a function that refreshes details displayed in the table controls.
      */
     function refreshTableControls() {
         if (activeTable) {
-            jQuery('.controls .pageNumber .currentPage').val(activeTable.pageNumber);
-            jQuery('.controls .pageNumber .lastPage').html(activeTable.lastPageNumber);
-            jQuery('.controls .pageNumber .recordCount').html(activeTable.count);
-            jQuery('.controls .pageSize select option[selected="selected"]').removeAttr('selected');
-            jQuery('.controls .pageSize select option[value="'+ activeTable.pageSize + '"]').attr("selected", "selected");
+            $('.controls .pageNumber .currentPage').val(activeTable.pageNumber);
+            $('.controls .pageNumber .lastPage').html(activeTable.lastPageNumber);
+            $('.controls .pageNumber .recordCount').html(activeTable.count);
+            $('.controls .pageSize select option[selected="selected"]').removeAttr('selected');
+            $('.controls .pageSize select option[value="'+ activeTable.pageSize + '"]').attr("selected", "selected");
         }
     }
     
     /*
      * Bind functions to the table controls dom elements.
      */
-    jQuery('.controls .control.firstPage').click(function() {
+    $('.controls .control.firstPage').click(function() {
         activeTable.firstPage();
     });
-    jQuery('.controls .control.previousPage').click(function() {
+    $('.controls .control.previousPage').click(function() {
         activeTable.previousPage();
     });
-    jQuery('.controls .control.nextPage').click(function() {
+    $('.controls .control.nextPage').click(function() {
         activeTable.nextPage();
     });
-    jQuery('.controls .control.lastPage').click(function() {
+    $('.controls .control.lastPage').click(function() {
         activeTable.lastPage();
     });
-    jQuery('.controls .pageSize select').change(function() {
+    $('.controls .pageSize select').change(function() {
         activeTable.setPageSize(parseInt($(this).val()));
     });
-    jQuery('.controls .pageNumber input').change(function() {
+    $('.controls .pageNumber input').change(function() {
         if( isNaN(parseInt($(this).val())) ) {
             $(this).val('');
         } else {
             activeTable.gotoPage($(this).val());
         }
     });
-    jQuery('.controls .control.refresh').click(function() {
+    $('.controls .control.refresh').click(function() {
+        $(submissions).hide();
+        $(loader).show();
         activeTable.refresh();
     });
     
-    jQuery('#sideNav').on('click', '.nav', function(event) {
+    $('#sideNav').on('click', '.nav', function(event) {
         event.preventDefault();
-        blockUICustom('<h1>Loading...</h1>', '300px');
-        activeTable = tables[jQuery(this).data('group-name')];
-        jQuery('#catalogSearchForm').hide();
-        jQuery('#catalogContainer').hide();
-        jQuery('#searchResults').hide();
-        jQuery('#searchActive').hide();
-        jQuery('.tableContainer').hide();
-        jQuery('#submissionsTable').show();
-        jQuery(activeTable.container).show();
-        jQuery('#breadCrumbSubmissions').find('.breadCrumb').text(jQuery(this).data('group-name'));
-        jQuery('#breadCrumbRoot').nextAll().remove();
-        jQuery('.breadCrumbArrow').remove();
-        jQuery('#breadCrumbRoot').append('<span class="breadCrumbArrow">></span>');
-        jQuery('#catalogBreadCrumbs').append(jQuery('#breadCrumbSubmissions').html());
+        $(submissions).hide();
+        $(loader).show();
+        activeTable = tables[$(this).data('group-name')];
+        // Hide all other display divs
+        $('#catalogSearchForm').hide();
+        $('#catalogContainer').hide();
+        $('#searchResults').hide();
+        $('#searchActive').hide();
+        $('.tableContainer').hide();
+        // Breadcrumbs
+        $('#breadCrumbSubmissions').find('.breadCrumb').text($(this).data('group-name'));
+        $('#breadCrumbRoot').nextAll().remove();
+        $('.breadCrumbArrow').remove();
+        $('#breadCrumbRoot').append('<span class="breadCrumbArrow">></span>');
+        $('#catalogBreadCrumbs').append($('#breadCrumbSubmissions').html());
         activeTable.refresh();
-        jQuery.unblockUI();
+        $(activeTable.container).show();
     });
 });

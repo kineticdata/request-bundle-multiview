@@ -23,12 +23,12 @@ $(document).ready(function() {
 
     // Set variables
     var searchResults = '#searchResults';
-    var searchLoader = '#searchLoader';
+    var loader = '#loader';
     /**
      * Action functions for catalog search
      */
     function before(jqXHR, settings) {
-        $(searchLoader).show();
+        $(loader).show();
         $(searchResults).hide();
         var searchValue = $('input[name="query"]').val();
         $('.searchValue').text(searchValue);
@@ -45,19 +45,19 @@ $(document).ready(function() {
             $('input[name="query"]').focus();
             // Message
             $(searchResults).html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> Search field required!</div>').show();
-            $(searchLoader).hide();
+            $(loader).hide();
         }
     }
 
     function success(data, textStatus, jqXHR) {
         if(data) {
             $(searchResults).html(data).show();
-            $(searchLoader).hide();
+            $(loader).hide();
         }
     }
 
     function error(jqXHR, textStatus, errorThrown) {
         $(searchResults).html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
-        $(searchLoader).hide();
+        $(loader).hide();
     }
 });

@@ -42,8 +42,8 @@
                     Catalog
                 </div>
             </div>
-            <%-- SEARCH LOADER --%>
-            <div id="searchLoader" class="hidden">
+            <%-- LOADER --%>
+            <div id="loader" class="hidden">
                 <img alt="Please Wait." src="<%=bundle.bundlePath()%>common/resources/images/spinner.gif" />
                 <br />
                 Loading Results

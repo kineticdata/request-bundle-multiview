@@ -114,6 +114,22 @@
 }
 
 /**
+ * Loader
+ */
+#loader {
+    float: left;
+    width: 844px;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+#loader img {
+    margin: 10px 0 10px 0; 
+    height: 28px; 
+    width: 28px;
+}
+
+/**
  * Search Form
  */
 #catalogSearchForm {
@@ -213,16 +229,4 @@
 
 #searchResults .templates .template .templateName {
     margin-bottom: 5px;
-}
-
-#searchLoader {
-    float: left;
-    width: 844px;
-    text-align: center;
-}
-
-#searchLoader img {
-    margin: 10px 0 10px 0; 
-    height: 28px; 
-    width: 28px;
 }
