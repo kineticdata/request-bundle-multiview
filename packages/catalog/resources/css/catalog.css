@@ -133,7 +133,7 @@
 }
 
 #catalogSearchForm .input-large{
-    width: 110px;
+    width: 105px;
 }
 
 #catalogSearchForm #searchButton  {
@@ -155,7 +155,6 @@
  * Search
  */
 #searchResults {
-    display: none;
     float: left;
     width: 844px;
 }
@@ -216,15 +215,14 @@
     margin-bottom: 5px;
 }
 
-#searchSpinner {
-    display: none;
-    font-size: 19px;
-    line-height: 150px;
-    margin: 0px 0px 0px 10px;
+#searchLoader {
     float: left;
+    width: 844px;
     text-align: center;
 }
 
-#searchSpinner img {
-    text-align: center;
+#searchLoader img {
+    margin: 10px 0 10px 0; 
+    height: 28px; 
+    width: 28px;
 }

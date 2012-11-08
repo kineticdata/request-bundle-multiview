@@ -42,14 +42,14 @@
                     Catalog
                 </div>
             </div>
-            <!-- Search Loader -->
-            <div id="loader" class="hidden" style="text-align: center;">
-                <img style="margin: 10px 0px 10px 0px; height: 28px; width: 28px;" alt="Please Wait." src="<%=bundle.bundlePath()%>common/resources/images/spinner.gif" />
+            <%-- SEARCH LOADER --%>
+            <div id="searchLoader" class="hidden">
+                <img alt="Please Wait." src="<%=bundle.bundlePath()%>common/resources/images/spinner.gif" />
                 <br />
                 Loading Results
             </div>
             <%-- SEARCH RESULTS VIEW --%>
-            <div id="searchResults">
+            <div id="searchResults" class="hidden">
             </div>
             <div id="catalogContainer">
                 <div id="nestedNav" class="borderRight">
