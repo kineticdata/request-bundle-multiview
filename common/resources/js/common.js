@@ -1,9 +1,10 @@
-/**
- * @TODO loading gif
- * @param message string
- */
-
-
+function gravatar(email, displaySelector) {
+    var lowercaseEmail = email.toLocaleLowerCase();
+    var md5 = $.md5(lowercaseEmail);
+    var gravatarHtml = '<img src="https://secure.gravatar.com/avatar/'+md5+'" />';
+    $(displaySelector).html(gravatarHtml);
+}
+   
 /**
  * @param loadingMsg string
  * @param width string

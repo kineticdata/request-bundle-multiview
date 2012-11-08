@@ -9,6 +9,7 @@
 
     bundle.setProperty("homeUrl", bundle.applicationPath() + "DisplayPage?name=AirCatalog");
     bundle.setProperty("loginUrl", bundle.applicationPath() + "DisplayPage?name=AirLogin");
+    bundle.setProperty("profileUrl", bundle.applicationPath() + "DisplayPage?name=UserProfile");
     bundle.setProperty("logoutUrl", "KSAuthenticationServlet?Logout=true");
 
     java.util.Map<String,String> submissionGroups = new java.util.LinkedHashMap();

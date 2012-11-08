@@ -297,13 +297,6 @@ table.kd-table th.kd-header-sorting-selected {
     text-decoration: none;
 }
 
-.contentHeader .userInfo:hover,
-.contentHeader .userInfo:focus,
-.contentHeader .userInfo:active {
-    cursor: pointer;
-}
-
-
 /**
  * Footer
  */
