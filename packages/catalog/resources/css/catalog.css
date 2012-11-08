@@ -148,8 +148,9 @@
     font-size: 12px;
 }
 
-#catalogSearchForm .input-large{
+#catalogSearchForm .input-large {
     width: 105px;
+    margin: 0;
 }
 
 #catalogSearchForm #searchButton  {
