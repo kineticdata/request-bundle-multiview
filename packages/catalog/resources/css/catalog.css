@@ -116,11 +116,15 @@
 /**
  * Search Form
  */
-form p { 
+#catalogSearchForm {
+    padding: 0 0 0 10px;
+}
+
+#catalogSearchForm p { 
     position:relative;
 }
 
-label  {
+#catalogSearchForm label  {
     margin: 2px 0px 0px 10px;
     position:absolute; 
     top:0; 
@@ -128,11 +132,11 @@ label  {
     font-size: 12px;
 }
 
-.input-large{
-    width: 120px;
+#catalogSearchForm .input-large{
+    width: 100px;
 }
 
-#searchButton  {
+#catalogSearchForm #searchButton  {
     background: url("../images/magnify.png") no-repeat scroll 0px 0px transparent;
     border: none;
     cursor: pointer;
