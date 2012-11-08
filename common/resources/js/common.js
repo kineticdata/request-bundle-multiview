@@ -1,4 +1,10 @@
 /**
+ * @TODO loading gif
+ * @param message string
+ */
+
+
+/**
  * @param loadingMsg string
  * @param width string
  */
