@@ -42,7 +42,9 @@
                 </div>
                 <!-- Logging In Spinner -->
                 <div class="hidden" id="loader">
-                    Authenticating... <img alt="Loading Indicator" src="<%=bundle.bundlePath()%>common/resources/images/spinner_00427E_FFFFFF.gif">
+                    <img style="margin: 0px 0px 10px 0px; height: 24px; width: 24px;" alt="Please Wait." src="<%=bundle.bundlePath()%>common/resources/images/spinner.gif" />
+                    <br />
+                    Authenticating
                 </div>
                 <!-- Error Message -->
                 <% if (!("".equals(customerRequest.getErrorMessage()) || customerRequest.getErrorMessage() == null)) { %>   
@@ -53,7 +55,7 @@
                 </div>
                 <% }%>
                 <!-- Login Form -->
-                <form id="loginForm" name="Login" method="post" action="KSAuthenticationServlet">
+                <form id="loginForm" class="border rounded boxShadow gradient" name="Login" method="post" action="KSAuthenticationServlet">
                     <!-- User Name -->
                     <p>
                         <label class="infield" for="UserName">Username</label>

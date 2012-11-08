@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+#loginForm {
+    padding: 19px;
+}
+
 #loginForm p { 
     position:relative;
 }
@@ -24,7 +28,7 @@
 }
 
 .loginSection {
-    width: 215px;
+    width: 255px;
     margin-left: auto;
     margin-right: auto;
     position: relative;

@@ -1,18 +1,18 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
     // Click event for search
-    jQuery('#catalogSearchForm').on('submit', function(event) {
+    $('#catalogSearchForm').on('submit', function(event) {
         // Prevent default action.
         event.preventDefault();
         // Execute the ajax request.
         BUNDLE.ajax({
             cache: false,
-            type: 'post',
-            data: jQuery(this).serialize(),
-            url: jQuery(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            url: $(this).attr('action'),
             beforeSend: function(jqXHR, settings) {
                 before(jqXHR, settings);
             },
-            success: function(data) {
+            success: function(data, textStatus, jqXHR) {
                 success(data);
             },
             error: function(jqXHR, textStatus, errorThrown) {
@@ -21,6 +21,9 @@ jQuery(document).ready(function() {
         });
     });
 
+    // Set variables
+    var searchResults = '#searchResults';
+    var loader = '#loader';
     /**
      * Action functions for catalog search
      */
@@ -31,10 +34,10 @@ jQuery(document).ready(function() {
         jQuery('.searchValue').text(searchValue);
         jQuery('#catalogContainer').hide();
         jQuery('#submissionsTable').hide();
-        jQuery('#searchResults').hide();        
+        jQuery('#searchResults').hide();
     }
 
-    function success(data) {
+    function success(data, textStatus, jqXHR) {
         if(data) {
             jQuery('#searchResults').html(data).show();
             jQuery.unblockUI();
@@ -44,8 +47,8 @@ jQuery(document).ready(function() {
         }
     }
 
-    function error() {
-        jQuery('#searchResults').html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
-        jQuery.unblockUI();
+    function error(jqXHR, textStatus, errorThrown) {
+        $(searchResults).html('<div class="message alert alert-error"><a class="close" data-dismiss="alert">x</a> There was an error. Try again.</div>').show();
+        $(loader).hide();
     }
 });

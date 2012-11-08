@@ -122,6 +122,22 @@
 }
 
 /**
+ * Loader
+ */
+#loader {
+    float: left;
+    width: 844px;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+#loader img {
+    margin: 10px 0 10px 0; 
+    height: 28px; 
+    width: 28px;
+}
+
+/**
  * Search Form
  */
 #catalogSearchForm {
@@ -239,4 +255,234 @@
 
 #submissionsNavigation .nav:hover {
     cursor: pointer;
+}
+
+/**
+ * Form controls
+ */
+input {
+    margin: 0;
+    padding: 0;
+}
+select {
+    margin: 0;
+    padding: 0;
+}
+
+input[type='text'] {
+    margin-bottom: 0;
+}
+
+/**
+ * Submissions
+ */
+#submissionsTable {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 0px 5px 0px 5px;
+}
+
+#submissionsTable .tableContainer {
+}
+
+/**
+ * Table
+ */
+table.kd-table {
+    margin: 10px 0;
+    width: 100%;
+}
+
+table.kd-table th, table.kd-table td {
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+}
+
+table.kd-table th {
+    cursor: pointer;
+}
+
+table.kd-table .kd-header-sorting-descending {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: -64px -16px;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+table.kd-table .kd-header-sorting-ascending {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: 0 -16px;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+table.kd-table .kd-header-sorting {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+    background-position: -128px 0;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+/**
+ * Controls
+ */
+.controls {
+    float: right;
+}
+
+.control {
+    float: left;
+    margin-left: 10px;
+}
+
+.button {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.control.pageNumber input {
+    text-align: center;
+    width: 30px;
+}
+
+/**
+ * Details
+ */
+.submissionDetails {
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+.submissionDetails .header {
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.submissionDetails .header a:hover {
+    text-decoration: underline;
+}
+
+.submissionDetails .header .serviceItem {
+    margin-right: 150px;
+}
+
+.submissionDetails .header .requestId {
+    float: right;
+    text-align: right;
+    width: 150px;
+}
+
+.submissionDetails .info {
+    padding: 5px;
+}
+
+.submissionDetails .cancel {
+    text-align: right;
+}
+
+.submissionDetails .label {
+    float: left;
+    font-weight: bold;
+    width: 150px;
+}
+
+.submissionDetails .value {
+    margin-left: 150px;
+}
+
+.submissionDetails .tasks .task {
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+/**
+ * Search
+ */
+#searchBack .header {
+}
+
+#searchBack .header:hover {
+    cursor: pointer;
+}
+
+#searchResults {
+    display: none;
+}
+
+#searchResults .message {
+    margin: 0px 0px 10px 20px;
+    float: left;
+}
+
+#searchResults .highlighted {
+    padding: 0px 0px 0px 0px;
+}
+
+#searchResults .templateName {
+    padding: 0px 0px 0px 5px;
+}
+
+#searchResults .templateName a {
+    font-weight: bold;
+}
+
+#searchResults .templates {
+}
+
+#searchResults .templates .template {
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+}
+
+#searchResults .templates .template .attribute {
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+#searchResults .templates .template .attributeName {
+    width: 100px;
+    padding: 0px 5px
+}
+
+#searchResults .templates .template .attributeValues {   
+    padding: 0px 5px 0px 5px;
+}
+
+#searchResults .templates .template .attributeValues .attributeValue {
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+#searchResults .templates .template .templateDescription {
+    margin-bottom: 5px;
+    padding: 0px 5px 0px 5px;
+}
+
+#searchResults .templates .template .templateName {
+    margin-bottom: 5px;
+}
+
+#searchSpinner {
+    display: none;
+    font-size: 19px;
+    line-height: 150px;
+    margin: 0px 0px 0px 10px;
+    float: left;
+    text-align: center;
+}
+
+#searchSpinner img {
+    text-align: center;
 }

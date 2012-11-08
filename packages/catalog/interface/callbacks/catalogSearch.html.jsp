@@ -53,8 +53,6 @@
             out.println("<div class=\"message alert alert-error\"><a class=\"close\" data-dismiss=\"alert\">x</a>No results were found.</div>");
         } else {
 %>
-<div id="searchFor" class="header clearfix" style="margin: 0px 10px 10px 10px;">
-</div>
 <div class="templates">
     <% for (int i = 0; i < matchingTemplates.length; i++) {%>
     <div class="template border gradient">
