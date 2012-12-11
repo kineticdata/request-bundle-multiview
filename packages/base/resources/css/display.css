@@ -108,6 +108,12 @@ textarea {
 
 *.preRequiredLabel { zoom: expression(setIE7PreRequired(this)); }
 
+/* Form controls */
+input[type="checkbox"] { float: left; margin: 4px 5px 0px 0px; }
+
+/* Checkboxes */
+#pageQuestionsForm .answerCheckbox { display: block !important; }
+
 /*
  * Styles for the table panel displayed for set fields external events
 */
