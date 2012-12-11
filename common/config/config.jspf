@@ -5,7 +5,7 @@
 --%>
 <%
     bundle.setProperty("companyName", "");
-    bundle.setProperty("catalogName", "MDA");
+    bundle.setProperty("catalogName", "Multiview");
 
     bundle.setProperty("homeUrl", bundle.applicationPath() + "DisplayPage?name=MDACatalog");
     bundle.setProperty("loginUrl", bundle.applicationPath() + "DisplayPage?name=MDALogin");
